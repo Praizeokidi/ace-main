@@ -1,0 +1,2184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="DPIA Made Easy – Professional Edition: a practical handbook, workbook and training guide for implementing Data Privacy Impact Assessments under the Nigeria Data Protection Act.">
+  <meta name="author" content="ACE Data Protection Consulting">
+  <meta name="theme-color" content="#4259A9">
+  <title>DPIA Made Easy – Professional Edition | ACE Data Protection Consulting</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/dpia-home.css">
+
+  <!-- LUXURY BRANDED WORKBOOK SECTION START -->
+  <style>
+    /* Ensure actual sections are hidden immediately on page start */
+    #hero-actual,
+    #intro-actual,
+    #workbook-actual,
+    #audience-actual,
+    #benefits-actual,
+    #toolkit-actual,
+    #training-actual,
+    #consultation-actual,
+    #ecosystem-actual,
+    #priority-actual,
+    #faq-actual,
+    #final-actual {
+      display: none;
+      opacity: 0;
+    }
+
+    /* --- HERO SKELETON STYLES --- */
+    .hero-skeleton-wrapper {
+      position: relative;
+      background: #0f172a;
+      /* Match your hero background color */
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .skel-shimmer {
+      background: linear-gradient(90deg,
+          rgba(66, 89, 169, 0.05) 0%,
+          rgba(66, 89, 169, 0.15) 50%,
+          rgba(66, 89, 169, 0.05) 100%);
+      background-size: 200% 100%;
+      animation: skel-load 1.8s infinite ease-in-out;
+      border-radius: 4px;
+    }
+
+    @keyframes skel-load {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    /* Shapes to match your Hero */
+    .skel-eyebrow {
+      width: 200px;
+      height: 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .skel-title {
+      width: 85%;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .skel-subtitle {
+      width: 60%;
+      height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .skel-desc {
+      width: 95%;
+      height: 16px;
+      margin-bottom: 10px;
+    }
+
+    .skel-btn {
+      width: 160px;
+      height: 48px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .skel-book {
+      width: 320px;
+      height: 480px;
+      border-radius: 12px;
+      margin: 0 auto;
+    }
+
+
+    /* --- INTRO SECTION SKELETON SHAPES --- */
+    .skel-intro-wrapper {
+      background: #fffdf9;
+      /* Match your section-cream color */
+      padding: 80px 0;
+    }
+
+    .skel-label-box {
+      width: 120px;
+      height: 14px;
+      margin-bottom: 10px;
+    }
+
+    .skel-intro-eyebrow {
+      width: 250px;
+      height: 12px;
+      margin-bottom: 20px;
+    }
+
+    .skel-intro-h2 {
+      width: 90%;
+      height: 40px;
+      margin-bottom: 30px;
+    }
+
+    .skel-text-line {
+      width: 100%;
+      height: 14px;
+      margin-bottom: 12px;
+    }
+
+    .skel-blockquote {
+      width: 100%;
+      height: 80px;
+      margin: 20px 0;
+      border-left: 4px solid rgba(66, 89, 169, 0.1);
+      background: rgba(66, 89, 169, 0.02);
+    }
+
+
+    /* --- WORKBOOK SECTION SKELETON --- */
+    .skel-workbook-wrapper {
+      background: #f8faff;
+      /* Match your section-light color */
+      padding: 100px 0;
+    }
+
+    .skel-card-elite {
+      background: #ffffff;
+      border: 1px solid rgba(66, 89, 169, 0.08);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      height: 80px;
+      /* Match your actual card height */
+    }
+
+    .skel-spotlight-elite {
+      grid-column: 1 / -1;
+      height: 100px;
+      background: rgba(66, 89, 169, 0.05);
+      border-radius: 20px;
+      margin-top: 1rem;
+    }
+
+    .skel-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .skel-card-title {
+      width: 70%;
+      height: 16px;
+      border-radius: 4px;
+    }
+
+    /* --- AUDIENCE SECTION SKELETON --- */
+    .skel-audience-wrapper {
+      background: #fffdf9;
+      /* Match your section-cream color */
+      padding: 80px 0;
+    }
+
+    .skel-audience-card {
+      background: #ffffff;
+      border: 1px solid rgba(66, 89, 169, 0.08);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      height: 220px;
+      /* Match your actual card height */
+    }
+
+    .skel-audience-wide {
+      grid-column: 1 / -1;
+      height: 180px;
+    }
+
+    .skel-card-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .skel-card-h3 {
+      width: 70%;
+      height: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .skel-card-p {
+      width: 100%;
+      height: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* --- BENEFITS SECTION SKELETON (DARK THEME) --- */
+    .skel-benefits-wrapper {
+      background: #0f172a;
+      /* Match your section-dark color */
+      padding: 100px 0;
+    }
+
+    .skel-benefit-block {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(66, 89, 169, 0.15);
+      border-radius: 16px;
+      padding: 2rem;
+      height: 200px;
+      /* Match your actual block height */
+    }
+
+    .skel-benefit-index {
+      width: 30px;
+      height: 18px;
+      margin-bottom: 1.5rem;
+      opacity: 0.5;
+    }
+
+    .skel-benefit-h3 {
+      width: 80%;
+      height: 22px;
+      margin-bottom: 1rem;
+    }
+
+    .skel-benefit-p {
+      width: 100%;
+      height: 14px;
+      margin-bottom: 8px;
+      opacity: 0.7;
+    }
+
+    /* Darker Shimmer for Dark Backgrounds */
+    .skel-benefits-wrapper .skel-shimmer {
+      background: linear-gradient(90deg,
+          rgba(66, 89, 169, 0.1) 0%,
+          rgba(66, 89, 169, 0.25) 50%,
+          rgba(66, 89, 169, 0.1) 100%);
+      background-size: 200% 100%;
+    }
+
+
+    /* --- TOOLKIT SECTION SKELETON --- */
+    .skel-toolkit-wrapper {
+      background: #f8faff;
+      /* Match your section-light color */
+      padding: 100px 0;
+    }
+
+    .skel-folder-art {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      border-radius: 20px;
+      margin: 0 auto;
+    }
+
+    .skel-resource-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .skel-resource-tag {
+      width: 140px;
+      height: 32px;
+      border-radius: 6px;
+      background: rgba(66, 89, 169, 0.05);
+    }
+
+    .skel-navy-btn {
+      width: 240px;
+      height: 52px;
+      border-radius: 50px;
+      margin-top: 20px;
+    }
+
+
+    /* --- TRAINING SECTION SKELETON --- */
+    .skel-training-wrapper {
+      background: #fffdf9;
+      /* Match your section-cream color */
+      padding: 100px 0;
+    }
+
+    .skel-training-types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .skel-training-tag {
+      width: 180px;
+      height: 36px;
+      border-radius: 6px;
+      background: rgba(66, 89, 169, 0.05);
+    }
+
+    .skel-lead-text {
+      width: 100%;
+      height: 24px;
+      margin-bottom: 12px;
+      border-radius: 4px;
+    }
+
+
+
+    /* --- CONSULTATION SECTION SKELETON (NAVY THEME) --- */
+    .skel-consultation-wrapper {
+      background: #0f172a;
+      /* Match your section-navy color */
+      padding: 100px 0;
+    }
+
+    .skel-consultation-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .skel-consultation-tag {
+      width: 200px;
+      height: 32px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .skel-white-btn {
+      width: 220px;
+      height: 52px;
+      border-radius: 50px;
+      background: #ffffff;
+      opacity: 0.2;
+    }
+
+
+    /* --- ECOSYSTEM SECTION SKELETON --- */
+    .skel-ecosystem-wrapper {
+      background: #f8faff;
+      /* Match your section-light color */
+      padding: 100px 0;
+    }
+
+    .skel-flow-line {
+      width: 300px;
+      height: 12px;
+      margin: 0 auto;
+      border-radius: 20px;
+      opacity: 0.4;
+    }
+
+    .skel-series-card {
+      background: #ffffff;
+      border: 1px solid rgba(66, 89, 169, 0.08);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      height: 100px;
+    }
+
+    .skel-series-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(66, 89, 169, 0.1);
+      flex-shrink: 0;
+    }
+
+    .skel-series-h3 {
+      width: 80%;
+      height: 16px;
+      margin-bottom: 8px;
+    }
+
+    .skel-series-p {
+      width: 50%;
+      height: 12px;
+      opacity: 0.6;
+    }
+
+
+    /* --- PRIORITY SECTION SKELETON (GOLD THEME) --- */
+    .skel-priority-wrapper {
+      background: #d4af37;
+      /* Match your section-gold color */
+      padding: 80px 0;
+    }
+
+    .skel-priority-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skel-benefit-tag {
+      width: 120px;
+      height: 28px;
+      border-radius: 4px;
+      background: rgba(15, 23, 42, 0.1);
+      /* Navy at low opacity */
+    }
+
+    .skel-form-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .skel-input-line {
+      width: 100%;
+      height: 45px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      background: #f1f5f9;
+    }
+
+    .skel-label-line {
+      width: 40%;
+      height: 12px;
+      margin-bottom: 8px;
+    }
+
+
+    /* --- FAQ SECTION SKELETON --- */
+    .skel-faq-wrapper {
+      background: #fffdf9;
+      /* Match your section-cream color */
+      padding: 80px 0;
+    }
+
+    .skel-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .skel-faq-item {
+      width: 100%;
+      height: 56px;
+      /* Match your summary height */
+      background: #ffffff;
+      border: 1px solid rgba(66, 89, 169, 0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .skel-faq-line {
+      width: 70%;
+      height: 14px;
+      border-radius: 4px;
+    }
+
+
+    /* --- FINAL BANNER SECTION SKELETON (DARK THEME) --- */
+    .skel-final-wrapper {
+      background: #0f172a;
+      /* Match your section-dark color */
+      padding: 80px 0;
+    }
+
+    .skel-final-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .skel-final-btn {
+      width: 180px;
+      height: 50px;
+      border-radius: 50px;
+      margin-left: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .skel-final-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .skel-final-btn {
+        margin: 10px 0;
+      }
+    }
+
+
+    /* Equal-width final action buttons */
+    .final-actions .button {
+      width: 220px;
+      min-width: 220px;
+      justify-content: center;
+    }
+
+    /* Typography Restore */
+    .icon-card-elite h3,
+    .icon-card-elite p,
+    .benefit-block h3,
+    .benefit-block p {
+      font-family: Cambria, Georgia, serif !important;
+    }
+
+
+
+
+
+
+    /* --- EXACT BRAND COLOR (#4259A9) LUXURY STYLING --- */
+    .workbook-luxury-elite {
+      background: linear-gradient(180deg, #f8faff 0%, #edf2fd 100%);
+      color: #1e293b;
+      padding: 110px 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .workbook-luxury-elite .shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .workbook-luxury-elite .section-heading {
+      text-align: center;
+      margin-bottom: 75px;
+    }
+
+    .workbook-luxury-elite .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #4259A9;
+      margin-bottom: 1rem;
+      padding: 6px 16px;
+      background: rgba(66, 89, 169, 0.08);
+      border-radius: 50px;
+    }
+
+    .workbook-luxury-elite h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .workbook-luxury-elite h2 em {
+      color: #4259A9;
+      font-style: italic;
+    }
+
+    .workbook-luxury-elite .section-heading p {
+      color: #475569;
+      font-size: 1.15rem;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Base Grid (Default 3 Columns for Workbook) */
+    .elite-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem 2rem;
+      align-items: stretch;
+    }
+
+    /* Modifier for 4-Column Layout (For Benefits) */
+    .elite-grid.grid-4-cols {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Mobile Responsiveness (ALWAYS put this at the bottom) */
+    @media (max-width: 1024px) {
+
+      .elite-grid,
+      .elite-grid.grid-4-cols {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .elite-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* Increase width specifically for the Benefits section */
+    #benefits-actual .shell {
+      max-width: 1320px !important;
+    }
+
+
+
+    /* Luxurious Card Design */
+    .icon-card-elite {
+      background: #ffffff;
+      border: 1px solid rgba(66, 89, 169, 0.12);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      /* Stack icon and text vertically */
+      align-items: center;
+      /* Center everything horizontally */
+      text-align: center;
+      /* Center the text inside h3 and p */
+      gap: 1.5rem;
+      min-height: 120px;
+      /* Adjust this value until the tallest card fits */
+      height: 100%;
+      box-shadow: 0 10px 30px -10px rgba(66, 89, 169, 0.06);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .icon-card-elite::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #4259A9;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .icon-card-elite:hover {
+      transform: translateY(-5px);
+      border-color: #4259A9;
+      box-shadow: 0 20px 40px -12px rgba(66, 89, 169, 0.18);
+    }
+
+    .icon-card-elite:hover::before {
+      opacity: 1;
+    }
+
+    .icon-badge-elite {
+      margin-top: 0;
+      /* Reset any previous offsets */
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(66, 89, 169, 0.1) 0%, rgba(66, 89, 169, 0.04) 100%);
+      border: 1px solid rgba(66, 89, 169, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4259A9;
+      transition: all 0.3s ease;
+    }
+
+    .icon-card-elite:hover .icon-badge-elite {
+      background: #4259A9;
+      color: #ffffff;
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .icon-badge-elite svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icon-card-elite h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0.75rem;
+      max-width: 280px;
+      /* Prevents titles from getting too wide */
+      line-height: 1.4;
+    }
+
+    .icon-card-elite p {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.6;
+      max-width: 320px;
+      /* Keeps the text block narrow and elegant */
+      margin: 0 auto;
+      /* Ensures the block itself is centered */
+    }
+
+
+
+    /* 13th Item Featured Spotlight to Eliminate Empty Space */
+    .spotlight-card-elite {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #4259A9 0%, #2f407c 100%);
+      color: #ffffff;
+      border: none;
+      padding: 2rem 2.5rem;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 20px 40px rgba(66, 89, 169, 0.25);
+      margin-top: 1rem;
+    }
+
+    .spotlight-card-elite .icon-badge-elite {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      margin-top: 5px;
+    }
+
+    .spotlight-card-elite h3 {
+      color: #ffffff;
+      font-size: 1.35rem;
+      margin: 0;
+    }
+
+    .spotlight-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .spotlight-card-elite {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .spotlight-content {
+        flex-direction: column;
+      }
+
+      .workbook-luxury-elite h2 {
+        font-size: 2.1rem;
+      }
+    }
+
+    .consent-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      cursor: pointer;
+      width: auto;
+    }
+
+    .consent-check input[type="checkbox"] {
+      appearance: auto;
+      /* reset any custom/button-like styling */
+      -webkit-appearance: auto;
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      /* stop it growing to fill the row */
+      margin: 3px 0 0 0;
+      /* small top margin to align with first line of text */
+      padding: 0;
+    }
+
+    .consent-check span {
+      flex: 1;
+    }
+  </style>
+
+
+</head>
+
+<body class="dpia-site">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="topbar">
+    <div class="shell topbar-inner">
+      <span class="topbar-note"><span class="topbar-dot"></span>
+        <bold> Launching SOON</bold>
+      </span>
+    </div>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="shell nav-wrap">
+      <a class="brand" href="/index.html" aria-label="ACE Data Protection Consulting home">
+        <img src="../images/logo.png" alt="ACE Data Protection Consulting" width="156" height="70">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+      <nav class="site-menu" id="site-menu" aria-label="Main navigation" data-menu>
+        <a href="#intro-actual">About the publication</a>
+        <a href="#workbook-actual">What it covers</a>
+        <a href="#training-actual">Training</a>
+        <a href="#faq-actual">FAQ</a>
+        <a class="nav-cta" href="#priority-list">Join priority list <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- START OF HERO CONTAINER -->
+    <div id="hero-master-wrapper" style="position: relative;">
+
+      <!-- [PASTE SKELETON CODE HERE] -->
+      <div id="hero-skeleton" class="hero-skeleton-wrapper">
+        <div class="shell hero-inner" style="display: flex; gap: 60px; align-items: center;">
+          <div class="hero-copy" style="flex: 1;">
+            <div class="skel-shimmer skel-eyebrow"></div>
+            <div class="skel-shimmer skel-title"></div>
+            <div class="skel-shimmer skel-subtitle"></div>
+            <div class="skel-shimmer skel-desc"></div>
+            <div class="skel-shimmer skel-desc" style="width: 80%;"></div>
+            <div class="hero-actions" style="margin-top: 40px;">
+              <div class="skel-shimmer skel-btn"></div>
+              <div class="skel-shimmer skel-btn"></div>
+            </div>
+          </div>
+          <div class="hero-art" style="flex: 1; text-align: center;">
+            <div class="skel-shimmer skel-book"></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="hero-actual" class="hero section-dark" style="display: none; opacity: 0;"
+        aria-labelledby="hero-title">
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+        <div class="shell hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-gold"><span class="eyebrow-rule"></span> Professional Edition · Launching SOON</p>
+            <h1 id="hero-title">DPIA Made Easy <em>– Professional Edition</em></h1>
+            <p class="hero-subtitle">A Practical Handbook, Workbook &amp; Training Guide</p>
+            <p class="hero-description">Practical guidance for organisations and privacy professionals implementing Data
+              Privacy Impact Assessments under the Nigeria Data Protection Act.</p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#priority-list">Join the Priority List <span
+                  aria-hidden="true">↗</span></a>
+              <a class="button button-outline-light" href="#training">Book DPIA Training <span
+                  aria-hidden="true">↗</span></a>
+              <a class="text-link text-link-light" href="#consultation">Request Consultation <span
+                  aria-hidden="true">→</span></a>
+            </div>
+            <p class="foreword"><span class="foreword-mark">✦</span> Includes a Foreword by Dr Vincent Olatunji,
+              National
+              Commissioner/CEO of the Nigeria Data Protection Commission.</p>
+          </div>
+          <div class="hero-art" aria-label="DPIA Made Easy Professional Edition book cover">
+            <div class="book-glow" aria-hidden="true"></div>
+            <div class="book-shadow" aria-hidden="true"></div>
+            <div class="book-card book-card-back" aria-hidden="true"></div>
+            <div class="book-card book-card-spine" aria-hidden="true"></div>
+            <img class="book-cover" src="../images/dpia-book-front.png"
+              alt="DPIA Made Easy: Data Privacy Impact Assessments, Professional Workbook Edition book cover"
+              width="381" height="666">
+            <div class="art-caption" style="color: #ffffff;"><span class="caption-line"></span><span>Knowledge that
+                moves<br>from regulation to
+                action.</span></div>
+          </div>
+        </div>
+        <div class="hero-wave" aria-hidden="true"></div>
+      </section>
+    </div>
+
+    <!-- MASTER INTRO WRAPPER -->
+    <div id="intro-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="intro-skeleton" class="skel-intro-wrapper">
+        <div class="shell intro-grid" style="display: flex; gap: 40px;">
+
+          <!-- Side Label Skeleton -->
+          <div class="section-label" style="flex: 0 0 200px;">
+            <div class="skel-shimmer skel-label-box"></div>
+          </div>
+
+          <!-- Main Content Skeleton -->
+          <div class="intro-content" style="flex: 1;">
+            <div class="skel-shimmer skel-intro-eyebrow"></div>
+            <div class="skel-shimmer skel-intro-h2"></div>
+
+            <div class="intro-body" style="display: flex; gap: 30px;">
+              <!-- Left Column -->
+              <div style="flex: 1;">
+                <div class="skel-shimmer skel-text-line"></div>
+                <div class="skel-shimmer skel-text-line"></div>
+                <div class="skel-shimmer skel-blockquote"></div>
+              </div>
+              <!-- Right Column -->
+              <div style="flex: 1;">
+                <div class="skel-shimmer skel-text-line" style="font-weight: bold;"></div>
+                <div class="skel-shimmer skel-text-line"></div>
+                <div class="skel-shimmer skel-text-line"></div>
+                <div class="skel-shimmer skel-text-line" style="width: 60%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <section id="intro-actual" class="intro section-light" style="display: none; opacity: 0;"
+        aria-labelledby="publication-title">
+        <div class="shell intro-grid">
+          <div class="section-label"><span>01</span><span class="label-line"></span><span>About the publication</span>
+          </div>
+          <div class="intro-content">
+            <p class="eyebrow">From Regulation to Practical Implementation</p>
+            <h2 id="publication-title">Move from knowing a DPIA is required to conducting one properly.</h2>
+            <div class="intro-body">
+              <div>
+                <p>Data Privacy Impact Assessments are a critical part of responsible data governance, yet many
+                  organisations still struggle with the practical question:</p>
+                <blockquote>How do we move from knowing that a DPIA is required to conducting one properly, documenting
+                  it
+                  clearly and using it to support real decisions?</blockquote>
+              </div>
+              <div>
+                <p><strong style="color:#000">DPIA Made Easy – Professional Edition</strong> was developed to bridge
+                  that gap.</p>
+                <p>The publication provides a structured, practical and governance-focused approach to DPIA
+                  implementation, helping organisations and professionals identify high-risk processing, assess privacy
+                  risks, develop proportionate mitigation measures and demonstrate accountability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- MASTER WORKBOOK WRAPPER -->
+    <div id="workbook-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE (Ghost Grid) -->
+      <div id="workbook-skeleton" class="skel-workbook-wrapper">
+        <div class="shell">
+          <!-- Heading Skeleton -->
+          <div class="section-heading centered-heading" style="text-align: center; margin-bottom: 60px;">
+            <div class="skel-shimmer" style="width: 180px; height: 24px; border-radius: 50px; margin: 0 auto 15px;">
+            </div>
+            <div class="skel-shimmer" style="width: 60%; height: 40px; margin: 0 auto 15px;"></div>
+            <div class="skel-shimmer" style="width: 40%; height: 16px; margin: 0 auto;"></div>
+          </div>
+
+          <!-- Grid Skeleton -->
+          <div class="elite-grid">
+            <!-- We generate 12 card skeletons to match your columns -->
+            <!-- Column 1 -->
+            <div class="elite-column">
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="elite-column">
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+            </div>
+            <!-- Column 3 -->
+            <div class="elite-column">
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+              <div class="skel-card-elite">
+                <div class="skel-shimmer skel-icon-box"></div>
+                <div class="skel-shimmer skel-card-title"></div>
+              </div>
+            </div>
+            <!-- Spotlight Skeleton -->
+            <div class="skel-shimmer skel-spotlight-elite"></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="workbook-actual" class="workbook section-light" style="display: none; opacity: 0;"
+        aria-describedby="workbook-description">
+        <div class="shell">
+          <div class="section-heading centered-heading">
+            <p class="eyebrow">What the Workbook Covers</p>
+            <h2 id="workbook-title">A workbook that follows the real work of a DPIA.</h2>
+            <p>This reflects the workbook’s progression from screening through approval and ongoing review.</p>
+          </div>
+          <div class="elite-grid">
+            <!-- Column 1 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v18H6.5a2.5 2.5 0 0 0-2.5 2.5Z" />
+                    <path d="M6 6h10M6 10h10" />
+                  </svg>
+                </div>
+                <h3>DPIA fundamentals and legal requirements</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                </div>
+                <h3>When a DPIA is required</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="m9 10 2 2-2 2M13 14h4" />
+                  </svg>
+                </div>
+                <h3>Pre-assessment screening</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                  </svg>
+                </div>
+                <h3>Scoping and describing processing activities</h3>
+              </article>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <line x1="11" y1="8" x2="11" y2="14" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
+                  </svg>
+                </div>
+                <h3>Privacy risk identification</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 20V10M12 20V4M6 20v-6" />
+                  </svg>
+                </div>
+                <h3>Likelihood and impact assessment</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
+                  </svg>
+                </div>
+                <h3>Mitigation planning</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                  </svg>
+                </div>
+                <h3>Residual risk evaluation</h3>
+              </article>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+                  </svg>
+                </div>
+                <h3>Governance and approval</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.73-5.19" />
+                  </svg>
+                </div>
+                <h3>Monitoring and review</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                </div>
+                <h3>Reflection exercises</h3>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 5h16v14H4z" />
+                    <path d="M8 9h8M8 12h5M8 15h8" />
+                  </svg>
+                </div>
+                <h3>Practical sector case studies</h3>
+              </article>
+            </div>
+
+            <!-- 13th Item Spotlight (Eliminates bottom empty space) -->
+            <article class="spotlight-card-elite">
+              <div class="spotlight-content">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 3h9l3 3v15H6z" />
+                    <path d="M15 3v4h4M9 12h6M9 16h6" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Implementation templates</h3>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- MASTER AUDIENCE WRAPPER -->
+    <div id="audience-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="audience-skeleton" class="skel-audience-wrapper">
+        <div class="shell">
+          <!-- Heading Skeleton -->
+          <div class="section-heading" style="display: flex; gap: 40px; margin-bottom: 60px;">
+            <div class="section-label" style="flex: 0 0 200px;">
+              <div class="skel-shimmer skel-label-box"></div>
+            </div>
+            <div style="flex: 1;">
+              <div class="skel-shimmer skel-intro-eyebrow" style="width: 300px;"></div>
+              <div class="skel-shimmer skel-intro-h2" style="width: 70%;"></div>
+            </div>
+          </div>
+
+          <!-- Audience Grid Skeleton -->
+          <div class="audience-grid">
+            <!-- 6 Regular Cards -->
+            <div class="skel-audience-card">
+              <div class="skel-shimmer skel-card-num"></div>
+              <div class="skel-shimmer skel-card-h3"></div>
+              <div class="skel-shimmer skel-card-p"></div>
+              <div class="skel-shimmer skel-card-p" style="width: 80%;"></div>
+            </div>
+            <div class="skel-audience-card">
+              <div class="skel-shimmer skel-card-num"></div>
+              <div class="skel-shimmer skel-card-h3"></div>
+              <div class="skel-shimmer skel-card-p"></div>
+              <div class="skel-shimmer skel-card-p" style="width: 80%;"></div>
+            </div>
+            <div class="skel-audience-card">
+              <div class="skel-shimmer skel-card-num"></div>
+              <div class="skel-shimmer skel-card-h3"></div>
+              <div class="skel-shimmer skel-card-p"></div>
+              <div class="skel-shimmer skel-card-p" style="width: 80%;"></div>
+            </div>
+            <div class="skel-audience-card">
+              <div class="skel-shimmer skel-card-num"></div>
+              <div class="skel-shimmer skel-card-h3"></div>
+              <div class="skel-shimmer skel-card-p"></div>
+              <div class="skel-shimmer skel-card-p" style="width: 80%;"></div>
+            </div>
+            <div class="skel-audience-card">
+              <div class="skel-shimmer skel-card-num"></div>
+              <div class="skel-shimmer skel-card-h3"></div>
+              <div class="skel-shimmer skel-card-p"></div>
+              <div class="skel-shimmer skel-card-p" style="width: 80%;"></div>
+            </div>
+            <div class="skel-audience-card">
+              <div class="skel-shimmer skel-card-num"></div>
+              <div class="skel-shimmer skel-card-h3"></div>
+              <div class="skel-shimmer skel-card-p"></div>
+              <div class="skel-shimmer skel-card-p" style="width: 80%;"></div>
+            </div>
+
+            <!-- 7th Wide Card Skeleton -->
+            <div class="skel-shimmer skel-audience-card skel-audience-wide"></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="audience-actual" class="audiences section-light" style="display: none; opacity: 0;"
+        aria-labelledby="audiences-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div class="section-label"><span>02</span><span class="label-line"></span><span>Who it is for</span></div>
+            <div>
+              <p class="eyebrow">Who Is It For? · Designed for professionals responsible for privacy, risk and
+                responsible
+                data use</p>
+              <h2 id="audiences-title">A practical reference for every decision-maker.</h2>
+            </div>
+          </div>
+          <div class="elite-grid">
+            <!-- Column 1 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Data Protection Officers</h3>
+                  <p>For professionals responsible for advising on and overseeing DPIAs.</p>
+                </div>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <div>
+
+                  <h3>DPCOs and Privacy Consultants</h3>
+                  <p>For practitioners who need a structured, repeatable approach across client engagements.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div>
+
+                  <h3>Compliance and Risk Professionals</h3>
+                  <p>For integrating privacy risk into broader governance and enterprise risk processes.</p>
+                </div>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                  </svg>
+                </div>
+                <div>
+
+                  <h3>Legal Professionals</h3>
+                  <p>For translating regulatory obligations into practical implementation.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <div>
+
+                  <h3>IT, Cybersecurity and Information Governance Teams</h3>
+                  <p>For embedding technical and organisational safeguards into systems and projects.</p>
+                </div>
+              </article>
+
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                    <path
+                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                    <path d="M9 12H4s.55-3.03 2-4.5c1.62-1.62 5-2 5-2" />
+                    <path d="M12 15v5s3.03-.55 4.5-2c1.62-1.62 2-5 2-5" />
+                  </svg>
+                </div>
+                <div>
+
+                  <h3>Project and Product Teams</h3>
+                  <p>For identifying privacy risks early in digital transformation and technology initiatives.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Featured Spotlight -->
+            <article class="spotlight-card-elite">
+              <div class="spotlight-content">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <div>
+
+                  <h3>Senior Leaders and Decision-Makers</h3>
+                  <p style="color: rgba(255,255,255,.85); margin: 5px 0 0;">For obtaining assurance over high-risk
+                    processing and documented risk decisions.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- MASTER BENEFITS WRAPPER -->
+    <div id="benefits-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="benefits-skeleton" class="skel-benefits-wrapper">
+        <div class="shell">
+          <!-- Heading Skeleton -->
+          <div class="section-heading benefits-heading" style="display: flex; gap: 40px; margin-bottom: 60px;">
+            <div class="section-label section-label-dark" style="flex: 0 0 200px;">
+              <div class="skel-shimmer skel-label-box"></div>
+            </div>
+            <div style="flex: 1;">
+              <div class="skel-shimmer skel-intro-eyebrow" style="width: 280px; background: #4259A9; opacity: 0.3;">
+              </div>
+              <div class="skel-shimmer skel-intro-h2" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <!-- Benefit Grid Skeleton -->
+          <div class="benefit-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+            <div class="skel-benefit-block">
+              <div class="skel-shimmer skel-benefit-index"></div>
+              <div class="skel-shimmer skel-benefit-h3"></div>
+              <div class="skel-shimmer skel-benefit-p"></div>
+              <div class="skel-shimmer skel-benefit-p" style="width: 70%;"></div>
+            </div>
+            <div class="skel-benefit-block">
+              <div class="skel-shimmer skel-benefit-index"></div>
+              <div class="skel-shimmer skel-benefit-h3"></div>
+              <div class="skel-shimmer skel-benefit-p"></div>
+              <div class="skel-shimmer skel-benefit-p" style="width: 70%;"></div>
+            </div>
+            <div class="skel-benefit-block">
+              <div class="skel-shimmer skel-benefit-index"></div>
+              <div class="skel-shimmer skel-benefit-h3"></div>
+              <div class="skel-shimmer skel-benefit-p"></div>
+              <div class="skel-shimmer skel-benefit-p" style="width: 70%;"></div>
+            </div>
+            <div class="skel-benefit-block">
+              <div class="skel-shimmer skel-benefit-index"></div>
+              <div class="skel-shimmer skel-benefit-h3"></div>
+              <div class="skel-shimmer skel-benefit-p"></div>
+              <div class="skel-shimmer skel-benefit-p" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="benefits-actual" class="benefits section-dpia-blue" style="display: none; opacity: 0;"
+        aria-labelledby="benefits-title">
+        <div class="shell">
+          <div class="section-heading benefits-heading">
+            <div class="section-label section-label-dark"><span>03</span><span class="label-line"></span><span>Why DPIA
+                Made Easy?</span></div>
+            <div>
+              <p class="eyebrow eyebrow-gold">Built for the work behind the policy</p>
+              <h2 id="benefits-title">Less theory. More <em>implementation.</em></h2>
+            </div>
+          </div>
+          <div class="elite-grid grid-4-cols">
+            <!-- Column 1 -->
+            <div class="elite-column ">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Practical, Not Theoretical</h3>
+                  <p>Designed to help users actually conduct and document DPIAs rather than simply understand the law.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="elite-column">
+              <article class="icon-card-elite ">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Governance Focused</h3>
+                  <p>Helps organisations use DPIAs as decision-making and accountability tools.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="elite-column ">
+              <article class="icon-card-elite ">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.7a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.18 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.7z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Built for Implementation</h3>
+                  <p>Includes exercises, screening guidance, case studies and templates that can be applied in real
+                    organisational environments.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="elite-column">
+              <article class="icon-card-elite">
+                <div class="icon-badge-elite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Aligned with the NDPA</h3>
+                  <p>Developed around the Nigeria Data Protection Act while also referencing recognised international
+                    good practice.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER TOOLKIT WRAPPER -->
+    <div id="toolkit-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="toolkit-skeleton" class="skel-toolkit-wrapper">
+        <div class="shell toolkit-grid" style="display: flex; gap: 60px; align-items: center;">
+
+          <!-- Left Art Skeleton -->
+          <div class="toolkit-art" style="flex: 1; text-align: center;">
+            <div class="skel-shimmer skel-folder-art"></div>
+          </div>
+
+          <!-- Right Copy Skeleton -->
+          <div class="toolkit-copy" style="flex: 1;">
+            <div class="skel-shimmer skel-intro-eyebrow"></div>
+            <div class="skel-shimmer skel-intro-h2"></div>
+            <div class="skel-shimmer skel-subtitle" style="width: 40%; height: 20px;"></div>
+
+            <div style="margin-top: 20px;">
+              <div class="skel-shimmer skel-text-line"></div>
+              <div class="skel-shimmer skel-text-line" style="width: 90%;"></div>
+            </div>
+
+            <!-- Resource List Skeleton -->
+            <div class="skel-resource-grid">
+              <div class="skel-shimmer skel-resource-tag"></div>
+              <div class="skel-shimmer skel-resource-tag"></div>
+              <div class="skel-shimmer skel-resource-tag"></div>
+              <div class="skel-shimmer skel-resource-tag"></div>
+              <div class="skel-shimmer skel-resource-tag"></div>
+              <div class="skel-shimmer skel-resource-tag"></div>
+            </div>
+
+            <div class="skel-shimmer skel-navy-btn"></div>
+          </div>
+
+        </div>
+      </div>
+      <section id="toolkit-actual" class="toolkit section-light" style="display: none; opacity: 0;"
+        aria-labelledby="toolkit-title">
+        <div class="shell toolkit-grid">
+          <div class="toolkit-art" aria-hidden="true">
+            <div class="folder folder-back"></div>
+            <div class="folder folder-front"><span>ACE</span><strong>TOOLKIT<br>Implementation</strong><small>Templates
+                and
+                resources</small></div>
+            <div class="toolkit-stamp">COMING<br>SOON</div>
+          </div>
+          <div class="toolkit-copy">
+            <p class="eyebrow">Introduce the Toolkit · The practical companion</p>
+            <h2 id="toolkit-title" style="color: #4259A9;">ACE TOOLKIT Implementation Templates</h2>
+            <p class="large-lead" style="color: #000;">Turn knowledge into action.</p>
+            <p style="color: #000;">The ACE TOOLKIT Implementation Templates is the practical companion to DPIA Made
+              Easy – Professional
+              Edition.
+            </p>
+            <p style=" color: #000;">It provides structured working tools, templates and checklists to help privacy
+              professionals and
+              organisations implement the DPIA process consistently.</p>
+            <div class=" resource-list">
+              <span>Pre-Assessment Screening &amp; Eligibility Form</span><span>Privacy Risk Assessment
+                Matrix</span><span>Stakeholder Consultation Record</span><span>Risk Mitigation Plan</span><span>DPIA
+                Review Checklist</span><span>Governance and Approval Record</span><span>DPIA
+                Register</span><span>Closure
+                and monitoring resources</span>
+            </div>
+            <a class="button dpia-button" href="#toolkit">Explore the ACE DPIA Toolkit <span
+                aria-hidden="true">↗</span></a>
+            <p class="coming-note">Coming Soon</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER TRAINING WRAPPER -->
+    <div id="training-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="training-skeleton" class="skel-training-wrapper">
+        <div class="shell training-grid" style="display: flex; gap: 60px;">
+
+          <!-- Left Heading Skeleton -->
+          <div style="flex: 0 0 40%;">
+            <div class="section-label">
+              <div class="skel-shimmer skel-label-box"></div>
+            </div>
+            <div class="skel-shimmer skel-intro-eyebrow"></div>
+            <div class="skel-shimmer skel-intro-h2"></div>
+          </div>
+
+          <!-- Right Copy Skeleton -->
+          <div class="training-copy" style="flex: 1;">
+            <div class="skel-shimmer skel-lead-text"></div>
+            <div class="skel-shimmer skel-lead-text" style="width: 85%;"></div>
+
+            <!-- Training Types Tags Skeleton -->
+            <div class="skel-training-types">
+              <div class="skel-shimmer skel-training-tag"></div>
+              <div class="skel-shimmer skel-training-tag"></div>
+              <div class="skel-shimmer skel-training-tag"></div>
+              <div class="skel-shimmer skel-training-tag"></div>
+              <div class="skel-shimmer skel-training-tag"></div>
+            </div>
+
+            <div class="skel-shimmer skel-btn" style="width: 180px; height: 50px; background: #4259A9; opacity: 0.2;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <section id="training-actual" class="training section-light" style="display: none; opacity: 0;"
+        aria-labelledby="training-title">
+        <div class="shell training-grid">
+          <div>
+            <div class="section-label"><span>04</span><span class="label-line"></span><span>Training</span></div>
+            <p class="eyebrow">ACE DPIA Professional Training</p>
+            <h2 id="training-title">Learn how to apply the <em class="highlight-header">methodology</em> in practice.
+            </h2>
+          </div>
+          <div class="training-copy">
+
+            <p class="large-lead">
+              <bold style="font-size: 2.25rem;"> The ACE DPIA Professional Training Programme is designed </bold><small
+                style="font-weight: 100;">
+                to help professionals
+                and
+                organisations develop practical capability in conducting, reviewing and governing DPIAs.</small>
+            </p>
+
+            <div class="training-types"><span>Corporate in-house training</span><span>Professional practitioner
+                workshops</span><span>Executive briefings</span><span>Public training
+                programmes</span><span>Sector-specific DPIA workshops</span></div>
+            <a class="button dpia-button" href="../contact.html#training">Book Training <span
+                aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER CONSULTATION WRAPPER -->
+    <div id="consultation-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="consultation-skeleton" class="skel-consultation-wrapper">
+        <div class="shell consultation-grid" style="display: flex; gap: 60px;">
+
+          <!-- Left Heading Skeleton -->
+          <div style="flex: 0 0 40%;">
+            <div class="skel-shimmer skel-intro-eyebrow" style="background: #4259A9; opacity: 0.4;"></div>
+            <div class="skel-shimmer skel-intro-h2" style="background: #ffffff; opacity: 0.1;"></div>
+            <div class="skel-shimmer skel-text-line" style="width: 80%; opacity: 0.3;"></div>
+          </div>
+
+          <!-- Right Content Skeleton -->
+          <div class="consultation-right" style="flex: 1;">
+            <!-- Consultation List Tags Skeleton -->
+            <div class="skel-consultation-list">
+              <div class="skel-shimmer skel-consultation-tag"></div>
+              <div class="skel-shimmer skel-consultation-tag"></div>
+              <div class="skel-shimmer skel-consultation-tag"></div>
+              <div class="skel-shimmer skel-consultation-tag"></div>
+              <div class="skel-shimmer skel-consultation-tag"></div>
+            </div>
+
+            <div class="skel-shimmer skel-white-btn"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <section id="consultation-actual" class="consultation section-navy" style="display: none; opacity: 0;"
+        aria-labelledby="consultation-title">
+        <div class="shell consultation-grid">
+          <div>
+            <p class="eyebrow eyebrow-gold">ACE Data Protection Consulting</p>
+            <h2 id="consultation-title">Need Support With a DPIA?</h2>
+            <p>ACE Data Protection Consulting can support organisations with:</p>
+          </div>
+          <div class="consultation-right">
+            <div class="consultation-list"><span>DPIA facilitation</span><span>High-risk processing
+                reviews</span><span>AI
+                and emerging technology assessments</span><span>DPIA programme development</span><span>Privacy
+                governance
+                frameworks</span><span>Independent DPIA review</span><span>Management and governance support</span>
+            </div>
+            <a class="button button-white" href="../contact.html#consultation">Request Consultation <span
+                aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER ECOSYSTEM WRAPPER -->
+    <div id="ecosystem-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="ecosystem-skeleton" class="skel-ecosystem-wrapper">
+        <div class="shell">
+          <!-- Centered Heading Skeleton -->
+          <div class="section-heading centered-heading" style="text-align: center; margin-bottom: 60px;">
+            <div class="skel-shimmer skel-intro-eyebrow" style="margin: 0 auto 15px;"></div>
+            <div class="skel-shimmer skel-intro-h2" style="width: 50%; margin: 0 auto 20px;"></div>
+            <div class="skel-shimmer skel-flow-line"></div>
+          </div>
+
+          <!-- Series Grid Skeleton -->
+          <div class="series-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div class="skel-series-card">
+              <div class="skel-shimmer skel-series-icon"></div>
+              <div style="flex: 1;">
+                <div class="skel-shimmer skel-series-h3"></div>
+                <div class="skel-shimmer skel-series-p"></div>
+              </div>
+            </div>
+            <div class="skel-series-card">
+              <div class="skel-shimmer skel-series-icon"></div>
+              <div style="flex: 1;">
+                <div class="skel-shimmer skel-series-h3"></div>
+                <div class="skel-shimmer skel-series-p"></div>
+              </div>
+            </div>
+            <div class="skel-series-card">
+              <div class="skel-shimmer skel-series-icon"></div>
+              <div style="flex: 1;">
+                <div class="skel-shimmer skel-series-h3"></div>
+                <div class="skel-shimmer skel-series-p"></div>
+              </div>
+            </div>
+            <div class="skel-series-card">
+              <div class="skel-shimmer skel-series-icon"></div>
+              <div style="flex: 1;">
+                <div class="skel-shimmer skel-series-h3"></div>
+                <div class="skel-shimmer skel-series-p"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="ecosystem-actual" class="ecosystem section-light" style="display: none; opacity: 0;"
+        aria-labelledby="ecosystem-title">
+        <div class="shell">
+          <div class="section-heading centered-heading">
+            <p class="eyebrow">Product Ecosystem · More than a publication</p>
+            <h2 id="ecosystem-title">The ACE DPIA Professional Series</h2>
+            <p>Learn <span class="flow-arrow">→</span> Implement <span class="flow-arrow">→</span> Build Capability
+              <span class="flow-arrow">→</span> Get Expert Support
+            </p>
+          </div>
+          <div class="series-grid">
+            <article class="series-card">
+              <div class="series-icon">01</div>
+              <div>
+                <h3>DPIA Made Easy – Professional Edition</h3>
+                <p>Knowledge and methodology</p>
+              </div>
+            </article>
+            <article class="series-card">
+              <div class="series-icon">02</div>
+              <div>
+                <h3>ACE DPIA Implementation Toolkit</h3>
+                <p>Practical tools and templates</p>
+              </div>
+            </article>
+            <article class="series-card">
+              <div class="series-icon">03</div>
+              <div>
+                <h3>ACE DPIA Professional Training</h3>
+                <p>Practical capability development</p>
+              </div>
+            </article>
+            <article class="series-card">
+              <div class="series-icon">04</div>
+              <div>
+                <h3>ACE DPIA Advisory Services</h3>
+                <p>Implementation and expert support</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER PRIORITY WRAPPER -->
+    <div id="priority-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="priority-skeleton" class="skel-priority-wrapper">
+        <div class="shell priority-grid" style="display: flex; gap: 60px; align-items: flex-start;">
+
+          <!-- Left Copy Skeleton -->
+          <div class="priority-copy" style="flex: 1;">
+            <div class="skel-shimmer skel-intro-eyebrow" style="background: #0f172a; opacity: 0.2;"></div>
+            <div class="skel-shimmer skel-intro-h2" style="background: #0f172a; opacity: 0.1;"></div>
+            <div class="skel-shimmer skel-text-line" style="width: 80%;"></div>
+            <div class="skel-shimmer skel-text-line" style="width: 40%;"></div>
+
+            <div class="skel-priority-benefits">
+              <div class="skel-shimmer skel-benefit-tag"></div>
+              <div class="skel-shimmer skel-benefit-tag"></div>
+              <div class="skel-shimmer skel-benefit-tag"></div>
+              <div class="skel-shimmer skel-benefit-tag"></div>
+            </div>
+          </div>
+
+          <!-- Right Form Skeleton -->
+          <div class="skel-form-box">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+              <div class="skel-shimmer" style="width: 120px; height: 16px;"></div>
+              <div class="skel-shimmer" style="width: 40px; height: 16px;"></div>
+            </div>
+            <div class="skel-shimmer skel-label-line"></div>
+            <div class="skel-shimmer skel-input-line"></div>
+            <div class="skel-shimmer skel-label-line"></div>
+            <div class="skel-shimmer skel-input-line"></div>
+            <div class="skel-shimmer skel-label-line"></div>
+            <div class="skel-shimmer skel-input-line"></div>
+            <div class="skel-shimmer skel-navy-btn"
+              style="width: 100%; margin-top: 10px; background: #0f172a; opacity: 0.2;"></div>
+          </div>
+
+        </div>
+      </div>
+      <section id="priority-actual" class="priority section-dpia-blue" style="display: none; opacity: 0;"
+        aria-labelledby="priority-title">
+        <div class="shell priority-grid">
+          <div class="priority-copy">
+            <p class="eyebrow eyebrow-gold">Launching SOON</p>
+            <h2 id="priority-title">Be the First to Know</h2>
+            <p class="light">DPIA Made Easy – Professional Edition launches in October 2026.</p>
+            <p class="light">Join the priority list for:</p>
+            <div class="priority-benefits"><span>Launch updates</span><span>Availability
+                notifications</span><span>Training announcements</span><span>Toolkit updates</span><span>Corporate
+                package
+                information</span></div>
+          </div>
+          <form class="priority-form" data-priority-form action="/api/priority-list" method="POST">
+            <div class="form-heading">
+              <span>Reserve your place</span>
+            </div>
+
+            <label for="first-name">First Name</label>
+            <input id="first-name" name="first-name" type="text" autocomplete="given-name" maxlength="80" required>
+
+            <label for="organisation">Organisation</label>
+
+            <input id="organisation" name="organisation" type="text" autocomplete="organization" maxlength="160"
+              required>
+
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+
+            <input type="hidden" name="source_page" value="DPIA Made Easy priority list">
+
+            <!-- Honeypot: keep empty; do not display to real visitors. -->
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
+              style="position:absolute;left:-9999px;">
+
+            <label class="consent-check" for="updates-consent">
+              <input id="updates-consent" name="updates_consent" type="checkbox" value="yes" required>
+              <span>I agree to receive ACE DPIA Professional Series updates.</span>
+            </label>
+
+            <button class="button dpia-button button-full" type="submit">Join the Priority List <span
+                aria-hidden="true">↗</span></button>
+            <p class="form-status" role="status" data-form-status></p>
+            <small class="foot-note">We’ll only use your details for ACE DPIA Professional Series updates.</small>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER FAQ WRAPPER -->
+    <div id="faq-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="faq-skeleton" class="skel-faq-wrapper">
+        <div class="shell faq-grid" style="display: flex; gap: 60px;">
+
+          <!-- Left Intro Skeleton -->
+          <div class="faq-intro" style="flex: 0 0 35%;">
+            <div class="skel-shimmer skel-intro-eyebrow"></div>
+            <div class="skel-shimmer skel-intro-h2"></div>
+            <div class="skel-shimmer skel-text-line" style="width: 90%;"></div>
+          </div>
+
+          <!-- Right List Skeleton -->
+          <div class="faq-list" style="flex: 1;">
+            <div class="skel-faq-list">
+              <div class="skel-faq-item">
+                <div class="skel-shimmer skel-faq-line"></div>
+              </div>
+              <div class="skel-faq-item">
+                <div class="skel-shimmer skel-faq-line" style="width: 50%;"></div>
+              </div>
+              <div class="skel-faq-item">
+                <div class="skel-shimmer skel-faq-line" style="width: 85%;"></div>
+              </div>
+              <div class="skel-faq-item">
+                <div class="skel-shimmer skel-faq-line" style="width: 60%;"></div>
+              </div>
+              <div class="skel-faq-item">
+                <div class="skel-shimmer skel-faq-line" style="width: 75%;"></div>
+              </div>
+              <div class="skel-faq-item">
+                <div class="skel-shimmer skel-faq-line" style="width: 40%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <section id="faq-actual" class="faq section-light" style="display: none; opacity: 0;" aria-labelledby="faq-title">
+        <div class="shell faq-grid">
+          <div class="faq-intro">
+            <p class="eyebrow">Questions, answered</p>
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+            <p>Everything you need to know before the Professional Edition launches.</p>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary class="dark">Is DPIA Made Easy suitable for beginners?</summary>
+              <p>Yes. The publication is structured progressively and is designed to support both professionals new to
+                DPIAs and experienced practitioners seeking a more structured implementation approach.</p>
+            </details>
+            <details>
+              <summary class="dark">Is the publication aligned with the Nigeria Data Protection Act?</summary>
+              <p>Yes. It is primarily aligned with the NDPA and supported by relevant regulatory guidance and recognised
+                international good practice.</p>
+            </details>
+            <details>
+              <summary class="dark">Does the workbook include practical exercises?</summary>
+              <p>Yes. It includes reflection exercises, case studies, checklists and practical implementation guidance.
+              </p>
+            </details>
+            <details>
+              <summary class="dark">Is the ACE DPIA Toolkit included?</summary>
+              <p>The Toolkit is a separate companion resource within the ACE DPIA Professional Series.</p>
+            </details>
+            <details>
+              <summary class="dark">Can ACE provide corporate training?</summary>
+              <p>Yes. Corporate, practitioner and executive DPIA training options will be available.</p>
+            </details>
+            <details>
+              <summary class="dark">Can ACE help us conduct a DPIA?</summary>
+              <p>Yes. Organisations can request advisory and implementation support directly through ACE Data Protection
+                Consulting.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MASTER FINAL BANNER WRAPPER -->
+    <div id="final-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="final-skeleton" class="skel-final-wrapper">
+        <div class="shell skel-final-inner">
+
+          <!-- Left Copy Skeleton -->
+          <div style="flex: 1;">
+            <div class="skel-shimmer skel-intro-eyebrow" style="background: #4259A9; opacity: 0.3;"></div>
+            <div class="skel-shimmer skel-intro-h2" style="width: 80%; height: 36px; margin-bottom: 15px;"></div>
+            <div class="skel-shimmer skel-text-line" style="width: 60%; opacity: 0.5;"></div>
+            <div class="skel-shimmer skel-text-line" style="width: 90%; opacity: 0.3;"></div>
+          </div>
+
+          <!-- Right Actions Skeleton -->
+          <div style="display: flex;">
+            <div class="skel-shimmer skel-final-btn" style="background: #4259A9; opacity: 0.2;"></div>
+            <div class="skel-shimmer skel-final-btn" style="background: #ffffff; opacity: 0.1;"></div>
+          </div>
+
+        </div>
+      </div>
+      <section id="final-actual" class="final-banner section-dpia-blue" style="display: none; opacity: 0;"
+        aria-labelledby="final-title">
+        <div class="shell final-banner-inner">
+          <div>
+            <p class="eyebrow eyebrow-gold">Coming Soon · Launching 2026</p>
+            <h2 id="final-title">DPIA Made Easy <em>– Professional Edition</em></h2>
+            <p>A Practical Handbook, Workbook &amp; Training Guide</p>
+            <p class="final-banner-support" style="color:white">Helping organisations move from regulatory requirements
+              to practical DPIA
+              implementation.</p>
+          </div>
+          <div class="final-actions"><a class="button button-white" href="#publication">Learn More <span
+                aria-hidden="true">↗</span></a><a class="button button-outline-light" href="#priority-list">Join
+              Priority
+              List <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><img src="../images/logo.png"
+            alt="ACE Data Protection Consulting" width="140" height="63"></a>
+        <p style="color: #ffffff;">Practical data protection, privacy and responsible technology guidance for
+          organisations across EMEA.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Explore</p>
+        <a href="#intro-actual" style="color: #ffffff;">The publication</a>
+        <a href="#toolkit-actual" style="color: #ffffff;">Implementation
+          toolkit</a>
+        <a href="#training-actual" style="color: #ffffff;">Professional training</a>
+        <a href="#consultation-actual" style="color: #ffffff;">Advisory services</a>
+      </div>
+      <div>
+        <p class="footer-heading">ACE Consulting</p>
+        <a href="/about.html" style="color: #ffffff;">About ACE</a>
+        <a href="/services.html" style="color: #ffffff;">Services</a>
+        <a href="/contact.html" style="color: #ffffff;">Contact us</a>
+        <a href="/privacy-policy.html" style="color: #ffffff;">Privacy policy</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 ACE Data Protection Consulting. All rights
+        reserved.</span><span>Designed for practical accountability.</span></div>
+  </footer>
+
+  <script src="js/dpia-home.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      // List of sections to transition
+      const sections = [
+        { skel: 'hero-skeleton', actual: 'hero-actual' },
+        { skel: 'intro-skeleton', actual: 'intro-actual' },
+        { skel: 'workbook-skeleton', actual: 'workbook-actual' },
+        { skel: 'audience-skeleton', actual: 'audience-actual' },
+        { skel: 'benefits-skeleton', actual: 'benefits-actual' },
+        { skel: 'toolkit-skeleton', actual: 'toolkit-actual' },
+        { skel: 'training-skeleton', actual: 'training-actual' },
+        { skel: 'consultation-skeleton', actual: 'consultation-actual' },
+        { skel: 'ecosystem-skeleton', actual: 'ecosystem-actual' },
+        { skel: 'priority-skeleton', actual: 'priority-actual' },
+        { skel: 'faq-skeleton', actual: 'faq-actual' },
+        { skel: 'final-skeleton', actual: 'final-actual' }
+      ];
+
+      setTimeout(() => {
+        sections.forEach(section => {
+          const skelEl = document.getElementById(section.skel);
+          const actualEl = document.getElementById(section.actual);
+
+          if (skelEl) skelEl.style.display = 'none';
+          if (actualEl) {
+            actualEl.style.display = 'block';
+            setTimeout(() => {
+              actualEl.style.transition = 'opacity 0.8s ease-out';
+              actualEl.style.opacity = '1';
+            }, 50);
+          }
+        });
+      }, 800);
+    });
+
+
+  </script>
+</body>
+<script>
+  document.querySelectorAll('[data-priority-form]').forEach(function (form) {
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const status = form.querySelector('[data-form-status]');
+      const button = form.querySelector('button[type="submit"]');
+      const originalButtonText = button.innerHTML;
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      status.textContent = 'Submitting…';
+      status.className = 'form-status';
+      button.disabled = true;
+      button.innerHTML = 'Submitting…';
+
+      try {
+        const response = await fetch('/api/priority-list', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.error || 'Submission failed.');
+        }
+
+        form.reset();
+        status.textContent = 'Thank you. You have joined the priority list.';
+        status.className = 'form-status is-success';
+      } catch (error) {
+        console.error(error);
+        status.textContent = 'We could not submit your details. Please try again.';
+        status.className = 'form-status is-error';
+      } finally {
+        button.disabled = false;
+        button.innerHTML = originalButtonText;
+      }
+    });
+  });
+</script>
+
+</html>
