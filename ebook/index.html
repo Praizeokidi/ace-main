@@ -275,41 +275,6 @@
     }
 
 
-    /* --- TOOLKIT SECTION SKELETON --- */
-    .skel-toolkit-wrapper {
-      background: #f8faff;
-      /* Match your section-light color */
-      padding: 100px 0;
-    }
-
-    .skel-folder-art {
-      width: 100%;
-      max-width: 400px;
-      height: 300px;
-      border-radius: 20px;
-      margin: 0 auto;
-    }
-
-    .skel-resource-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0;
-    }
-
-    .skel-resource-tag {
-      width: 140px;
-      height: 32px;
-      border-radius: 6px;
-      background: rgba(66, 89, 169, 0.05);
-    }
-
-    .skel-navy-btn {
-      width: 240px;
-      height: 52px;
-      border-radius: 50px;
-      margin-top: 20px;
-    }
 
 
     /* --- TRAINING SECTION SKELETON --- */
@@ -1092,6 +1057,97 @@
         scroll-behavior: auto;
         transition: none !important;
       }
+    }
+
+
+
+    .toolkit-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: none;
+    }
+
+    .toolkit-modal.is-open {
+      display: block;
+    }
+
+    .toolkit-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 20, 40, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .toolkit-modal-panel {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 8vh auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      max-height: 82vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .toolkit-modal.is-open .toolkit-modal-panel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .toolkit-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: transparent;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .toolkit-modal-list {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .toolkit-modal-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #f4f6fb;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    .toolkit-code {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #4259A9;
+      background: #e8ecf7;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    body.toolkit-modal-open {
+      overflow: hidden;
     }
   </style>
 
@@ -2587,7 +2643,7 @@
     </div>
 
 
-    <!-- ABOUT THE AUTHOR SKELETON: place immediately before #about-author -->
+    <!-- ABOUT THE AUTHOR WRAPPER-->
     <div id="author-master-wrapper" class="skel-author-wrapper" style="position: relative;" aria-hidden="true">
 
       <!-- 1. SKELETON STATE -->
@@ -2671,7 +2727,6 @@
               </div>
 
               <div class="author-editorial__caption">
-                <span class="author-editorial__caption-number" aria-hidden="true">01</span>
                 <span>Founder &amp; Chief Executive Officer<br>ACE Data Protection Consulting Ltd</span>
               </div>
             </div>
@@ -2748,9 +2803,6 @@
         </div>
       </section>
     </div>
-
-
-
 
     <!-- MASTER FAQ WRAPPER -->
     <div id="faq-master-wrapper" style="position: relative;">
@@ -2940,8 +2992,6 @@
         });
       }, 800);
     });
-
-
   </script>
 
   <div class="toolkit-modal" data-toolkit-modal aria-hidden="true">
@@ -2966,9 +3016,6 @@
       <p class="coming-note">Coming Soon</p>
     </div>
   </div>
-
-
-
 </body>
 <script>
   document.querySelectorAll('[data-priority-form]').forEach(function (form) {
