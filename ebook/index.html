@@ -32,7 +32,8 @@
     #ecosystem-actual,
     #priority-actual,
     #faq-actual,
-    #final-actual {
+    #final-actual,
+    #about-author-actual {
       display: none;
       opacity: 0;
     }
@@ -528,6 +529,230 @@
       }
     }
 
+    /* The ebook page already defines .skel-shimmer and @keyframes skel-load. */
+    .skel-author-wrapper {
+      overflow: hidden;
+      padding: 100px 0;
+      background: #eef1fb;
+    }
+
+    .skel-author-intro {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 60px;
+    }
+
+    .skel-author-eyebrow {
+      width: 210px;
+      height: 12px;
+      border-radius: 20px;
+    }
+
+    .skel-author-rule {
+      width: 86px;
+      height: 1px;
+    }
+
+    .skel-author-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.76fr) minmax(0, 1.24fr);
+      align-items: start;
+      gap: 80px;
+    }
+
+    .skel-author-visual {
+      width: 100%;
+      max-width: 430px;
+    }
+
+    .skel-author-portrait {
+      position: relative;
+      display: flex;
+      min-height: 500px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 2px;
+      background-color: rgba(66, 89, 169, 0.12);
+    }
+
+    .skel-author-ring {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border: 1px solid rgba(66, 89, 169, 0.16);
+      border-radius: 50%;
+    }
+
+    .skel-author-initials {
+      position: relative;
+      z-index: 1;
+      width: 150px;
+      height: 78px;
+    }
+
+    .skel-author-portrait-label {
+      position: absolute;
+      right: 22px;
+      bottom: 20px;
+      width: 92px;
+      height: 9px;
+    }
+
+    .skel-author-caption {
+      display: flex;
+      gap: 14px;
+      margin-top: 19px;
+    }
+
+    .skel-author-caption-number {
+      width: 18px;
+      height: 10px;
+      flex: 0 0 18px;
+      margin-top: 3px;
+    }
+
+    .skel-author-caption-line {
+      width: 265px;
+      height: 10px;
+      margin-bottom: 8px;
+    }
+
+    .skel-author-caption-line-short {
+      width: 180px;
+    }
+
+    .skel-author-copy {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .skel-author-title {
+      width: min(420px, 80%);
+      height: 68px;
+      margin-bottom: 22px;
+    }
+
+    .skel-author-lead {
+      width: min(520px, 92%);
+      height: 18px;
+      margin-bottom: 9px;
+    }
+
+    .skel-author-lead-short {
+      width: 64%;
+      margin-bottom: 32px;
+    }
+
+    .skel-author-identity {
+      padding: 22px 0 20px;
+      border-top: 1px solid rgba(66, 89, 169, 0.16);
+      border-bottom: 1px solid rgba(66, 89, 169, 0.16);
+    }
+
+    .skel-author-name {
+      width: 270px;
+      height: 21px;
+      margin-bottom: 10px;
+    }
+
+    .skel-author-role {
+      width: 390px;
+      max-width: 90%;
+      height: 12px;
+    }
+
+    .skel-author-credentials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      margin: 28px 0 32px;
+      background: rgba(66, 89, 169, 0.16);
+    }
+
+    .skel-author-credential {
+      min-height: 86px;
+      background-color: rgba(66, 89, 169, 0.08);
+    }
+
+    .skel-author-bio-line {
+      width: 100%;
+      height: 14px;
+      margin-bottom: 10px;
+    }
+
+    .skel-author-bio-line-short {
+      width: 72%;
+      margin-bottom: 22px;
+    }
+
+    .skel-author-bio-line-medium {
+      width: 84%;
+    }
+
+    .skel-author-quote {
+      width: 100%;
+      height: 86px;
+      margin-top: 34px;
+      border-left: 4px solid rgba(66, 89, 169, 0.22);
+      background-color: rgba(66, 89, 169, 0.1);
+    }
+
+    @media (max-width: 800px) {
+      .skel-author-wrapper {
+        padding: 80px 0;
+      }
+
+      .skel-author-grid {
+        grid-template-columns: 1fr;
+        gap: 52px;
+      }
+
+      .skel-author-visual {
+        width: min(100%, 430px);
+        margin: 0 auto;
+      }
+
+      .skel-author-copy {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .skel-author-intro {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 38px;
+      }
+
+      .skel-author-rule {
+        width: 72px;
+      }
+
+      .skel-author-portrait {
+        min-height: 390px;
+      }
+
+      .skel-author-ring {
+        width: 285px;
+        height: 285px;
+      }
+
+      .skel-author-credentials {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .skel-author-wrapper .skel-shimmer {
+        animation: none;
+      }
+    }
+
+
+
 
     /* Equal-width final action buttons */
     .final-actions .button {
@@ -964,10 +1189,8 @@
         transition: none !important;
       }
     }
-  </style>
 
 
-  <style>
     /* ACE brand palette override: #4259a9 with coordinated shades. */
     .author-editorial {
       --author-blue: #4259a9;
@@ -1322,6 +1545,7 @@
       flex: 1;
     }
   </style>
+
 
 
 </head>
@@ -2456,6 +2680,164 @@
       </section>
     </div>
 
+    <!-- ABOUT THE AUTHOR SKELETON: place immediately before #about-author -->
+    <div id="author-skeleton" class="skel-author-wrapper" aria-hidden="true">
+      <div class="shell">
+        <div class="skel-author-intro">
+          <div class="skel-shimmer skel-author-eyebrow"></div>
+          <div class="skel-shimmer skel-author-rule"></div>
+        </div>
+
+        <div class="skel-author-grid">
+          <!-- Matches .author-editorial__portrait-column -->
+          <div class="skel-author-visual">
+            <div class="skel-shimmer skel-author-portrait">
+              <div class="skel-author-ring"></div>
+              <div class="skel-shimmer skel-author-initials"></div>
+              <div class="skel-shimmer skel-author-portrait-label"></div>
+            </div>
+
+            <div class="skel-author-caption">
+              <div class="skel-shimmer skel-author-caption-number"></div>
+              <div class="skel-author-caption-copy">
+                <div class="skel-shimmer skel-author-caption-line"></div>
+                <div class="skel-shimmer skel-author-caption-line skel-author-caption-line-short"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Matches .author-editorial__content -->
+          <div class="skel-author-copy">
+            <div class="skel-shimmer skel-author-title"></div>
+            <div class="skel-shimmer skel-author-lead"></div>
+            <div class="skel-shimmer skel-author-lead skel-author-lead-short"></div>
+
+            <div class="skel-author-identity">
+              <div class="skel-shimmer skel-author-name"></div>
+              <div class="skel-shimmer skel-author-role"></div>
+            </div>
+
+            <div class="skel-author-credentials">
+              <div class="skel-shimmer skel-author-credential"></div>
+              <div class="skel-shimmer skel-author-credential"></div>
+              <div class="skel-shimmer skel-author-credential"></div>
+              <div class="skel-shimmer skel-author-credential"></div>
+            </div>
+
+            <div class="skel-author-bio">
+              <div class="skel-shimmer skel-author-bio-line"></div>
+              <div class="skel-shimmer skel-author-bio-line"></div>
+              <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-short"></div>
+              <div class="skel-shimmer skel-author-bio-line"></div>
+              <div class="skel-shimmer skel-author-bio-line"></div>
+              <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-short"></div>
+              <div class="skel-shimmer skel-author-bio-line"></div>
+              <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-medium"></div>
+            </div>
+
+            <div class="skel-shimmer skel-author-quote"></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="author-editorial" id="about-author-actual" aria-labelledby="author-editorial-title">
+        <div class="author-editorial__ornament" aria-hidden="true"></div>
+
+        <div class="shell">
+          <div class="author-editorial__intro">
+            <p class="eyebrow author-editorial__eyebrow">The voice behind the method</p>
+            <span class="author-editorial__rule" aria-hidden="true"></span>
+          </div>
+
+          <div class="author-editorial__grid">
+            <div class="author-editorial__portrait-column">
+              <!-- Replace this placeholder with the author’s portrait when available. -->
+              <div class="author-editorial__portrait" role="img" aria-label="Portrait placeholder for S. A. Kitchener">
+                <div class="author-editorial__portrait-inner">
+                  <span class="author-editorial__initials" aria-hidden="true">SAK</span>
+                  <span class="author-editorial__portrait-label">Author portrait</span>
+                </div>
+              </div>
+
+              <div class="author-editorial__caption">
+                <span class="author-editorial__caption-number" aria-hidden="true">01</span>
+                <span>Founder &amp; Chief Executive Officer<br>ACE Data Protection Consulting Ltd</span>
+              </div>
+            </div>
+
+            <div class="author-editorial__content">
+              <h2 id="author-editorial-title">About the Author</h2>
+              <p class="author-editorial__lead">
+                Turning regulatory expectations into practical, defensible action.
+              </p>
+
+              <div class="author-editorial__identity">
+                <h3>S. A. Kitchener <span>CIPP/E, CIPM</span></h3>
+                <p>Founder and Chief Executive Officer, ACE Data Protection Consulting Ltd</p>
+              </div>
+
+              <div class="author-editorial__credentials" aria-label="Author credentials and areas of experience">
+                <div class="author-editorial__credential">
+                  <strong>CIPP/E</strong>
+                  <span>Certified privacy professional</span>
+                </div>
+                <div class="author-editorial__credential">
+                  <strong>CIPM</strong>
+                  <span>Privacy programme management</span>
+                </div>
+                <div class="author-editorial__credential">
+                  <strong>EMEA</strong>
+                  <span>International experience</span>
+                </div>
+                <div class="author-editorial__credential">
+                  <strong>HBS</strong>
+                  <span>Executive education</span>
+                </div>
+              </div>
+
+              <div class="author-editorial__bio">
+                <p>
+                  S. A. Kitchener, CIPP/E, CIPM is the Founder and Chief Executive Officer of ACE Data Protection
+                  Consulting Ltd,
+                  a Data Protection Compliance Organisation (DPCO) licensed by the Nigeria Data Protection Commission
+                  (NDPC).
+                </p>
+                <p>
+                  She has completed Executive Education in Data Protection &amp; Technology at Harvard Business School
+                  and brings
+                  extensive experience supporting organisations across the public and private sectors within Europe, the
+                  Middle
+                  East and Africa (EMEA).
+                </p>
+                <p>
+                  She has worked with organisations at various stages of data protection maturity, guiding the
+                  implementation of
+                  regulatory frameworks and developing practical, business-focused compliance programmes.
+                </p>
+                <p>
+                  Through this work, she identified a consistent gap between regulatory expectations and real-world
+                  implementation—
+                  an insight that inspired the development of <em>DPIA Made Easy – Professional Edition</em>.
+                </p>
+              </div>
+
+              <blockquote class="author-editorial__quote">
+                <span class="author-editorial__quote-mark" aria-hidden="true">“</span>
+                <p>
+                  DPIA Made Easy equips organisations and privacy professionals with the clarity, structure and
+                  practical tools
+                  needed to assess high-risk processing, manage privacy and digital risk, and demonstrate meaningful
+                  accountability.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
 
     <!-- MASTER FAQ WRAPPER -->
     <div id="faq-master-wrapper" style="position: relative;">
@@ -2625,6 +3007,7 @@
         { skel: 'priority-skeleton', actual: 'priority-actual' },
         { skel: 'faq-skeleton', actual: 'faq-actual' },
         { skel: 'final-skeleton', actual: 'final-actual' },
+        { skel: 'author-skeleton', actual: 'about-author-actual' }
 
       ];
 
