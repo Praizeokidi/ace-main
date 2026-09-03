@@ -545,7 +545,81 @@
     }
 
 
+    .toolkit-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: none;
+    }
 
+    .toolkit-modal.is-open {
+      display: block;
+    }
+
+    .toolkit-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 20, 40, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .toolkit-modal-panel {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 8vh auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      max-height: 82vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .toolkit-modal.is-open .toolkit-modal-panel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .toolkit-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: transparent;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .toolkit-modal-list {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .toolkit-modal-list li {
+      padding: 10px 14px;
+      background: #f4f6fb;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1a1a1a;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    body.toolkit-modal-open {
+      overflow: hidden;
+    }
 
 
 
@@ -1638,8 +1712,8 @@
                 Register</span><span>Closure
                 and monitoring resources</span>
             </div>
-            <a class="button dpia-button" href="#toolkit">Explore the ACE DPIA Toolkit <span
-                aria-hidden="true">↗</span></a>
+            <button type="button" class="button dpia-button" data-toolkit-modal-open>Explore the ACE DPIA Toolkit <span
+                aria-hidden="true">↗</span></button>
             <p class="coming-note">Coming Soon</p>
           </div>
         </div>
@@ -1944,6 +2018,103 @@
       </section>
     </div>
 
+
+    <section class="author-editorial" id="about-author" aria-labelledby="author-editorial-title">
+      <div class="author-editorial__ornament" aria-hidden="true"></div>
+
+      <div class="shell">
+        <div class="author-editorial__intro">
+          <p class="eyebrow author-editorial__eyebrow">The voice behind the method</p>
+          <span class="author-editorial__rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="author-editorial__grid">
+          <div class="author-editorial__portrait-column">
+            <!-- Replace this placeholder with the author’s portrait when available. -->
+            <div class="author-editorial__portrait" role="img" aria-label="Portrait placeholder for S. A. Kitchener">
+              <div class="author-editorial__portrait-inner">
+                <span class="author-editorial__initials" aria-hidden="true">SAK</span>
+                <span class="author-editorial__portrait-label">Author portrait</span>
+              </div>
+            </div>
+
+            <div class="author-editorial__caption">
+              <span class="author-editorial__caption-number" aria-hidden="true">01</span>
+              <span>Founder &amp; Chief Executive Officer<br>ACE Data Protection Consulting Ltd</span>
+            </div>
+          </div>
+
+          <div class="author-editorial__content">
+            <h2 id="author-editorial-title">About the Author</h2>
+            <p class="author-editorial__lead">
+              Turning regulatory expectations into practical, defensible action.
+            </p>
+
+            <div class="author-editorial__identity">
+              <h3>S. A. Kitchener <span>CIPP/E, CIPM</span></h3>
+              <p>Founder and Chief Executive Officer, ACE Data Protection Consulting Ltd</p>
+            </div>
+
+            <div class="author-editorial__credentials" aria-label="Author credentials and areas of experience">
+              <div class="author-editorial__credential">
+                <strong>CIPP/E</strong>
+                <span>Certified privacy professional</span>
+              </div>
+              <div class="author-editorial__credential">
+                <strong>CIPM</strong>
+                <span>Privacy programme management</span>
+              </div>
+              <div class="author-editorial__credential">
+                <strong>EMEA</strong>
+                <span>International experience</span>
+              </div>
+              <div class="author-editorial__credential">
+                <strong>HBS</strong>
+                <span>Executive education</span>
+              </div>
+            </div>
+
+            <div class="author-editorial__bio">
+              <p>
+                S. A. Kitchener, CIPP/E, CIPM is the Founder and Chief Executive Officer of ACE Data Protection
+                Consulting Ltd,
+                a Data Protection Compliance Organisation (DPCO) licensed by the Nigeria Data Protection Commission
+                (NDPC).
+              </p>
+              <p>
+                She has completed Executive Education in Data Protection &amp; Technology at Harvard Business School and
+                brings
+                extensive experience supporting organisations across the public and private sectors within Europe, the
+                Middle
+                East and Africa (EMEA).
+              </p>
+              <p>
+                She has worked with organisations at various stages of data protection maturity, guiding the
+                implementation of
+                regulatory frameworks and developing practical, business-focused compliance programmes.
+              </p>
+              <p>
+                Through this work, she identified a consistent gap between regulatory expectations and real-world
+                implementation—
+                an insight that inspired the development of <em>DPIA Made Easy – Professional Edition</em>.
+              </p>
+            </div>
+
+            <blockquote class="author-editorial__quote">
+              <span class="author-editorial__quote-mark" aria-hidden="true">“</span>
+              <p>
+                DPIA Made Easy equips organisations and privacy professionals with the clarity, structure and practical
+                tools
+                needed to assess high-risk processing, manage privacy and digital risk, and demonstrate meaningful
+                accountability.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- MASTER FAQ WRAPPER -->
     <div id="faq-master-wrapper" style="position: relative;">
 
@@ -2133,6 +2304,32 @@
 
 
   </script>
+
+  <div class="toolkit-modal" data-toolkit-modal aria-hidden="true">
+    <div class="toolkit-modal-backdrop" data-toolkit-modal-close></div>
+    <div class="toolkit-modal-panel" role="dialog" aria-modal="true" aria-labelledby="toolkit-modal-title">
+      <button type="button" class="toolkit-modal-close" data-toolkit-modal-close aria-label="Close">&times;</button>
+      <p class="eyebrow">ACE TOOLKIT · Implementation Templates</p>
+      <h2 id="toolkit-modal-title">ACE DPIA Implementation Toolkit</h2>
+      <ul class="toolkit-modal-list">
+        <li><span class="toolkit-code">ACE-DPIA-001</span>Pre-Assessment Screening &amp; Eligibility Form</li>
+        <li><span class="toolkit-code">ACE-DPIA-002</span>Official NDPC Schedule 4 DPIA Template (ACE Reformatted
+          Edition)</li>
+        <li><span class="toolkit-code">ACE-DPIA-003</span>Privacy Risk Assessment Matrix</li>
+        <li><span class="toolkit-code">ACE-DPIA-004</span>Stakeholder Consultation Record</li>
+        <li><span class="toolkit-code">ACE-DPIA-005</span>Data Flow Mapping Worksheet</li>
+        <li><span class="toolkit-code">ACE-DPIA-006</span>Risk Mitigation Action Plan</li>
+        <li><span class="toolkit-code">ACE-DPIA-007</span>DPIA Decision &amp; Approval Record</li>
+        <li><span class="toolkit-code">ACE-DPIA-008</span>DPIA Review Checklist</li>
+        <li><span class="toolkit-code">ACE-DPIA-009</span>DPIA Register</li>
+        <li><span class="toolkit-code">ACE-DPIA-010</span>DPIA Closure Record</li>
+      </ul>
+      <p class="coming-note">Coming Soon</p>
+    </div>
+  </div>
+
+
+
 </body>
 <script>
   document.querySelectorAll('[data-priority-form]').forEach(function (form) {

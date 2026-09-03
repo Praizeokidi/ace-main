@@ -25,3 +25,39 @@
     window.addEventListener("scroll", setScrolledState, { passive: true });
   }
 })();
+
+const toolkitModal = document.querySelector("[data-toolkit-modal]");
+const toolkitOpenTriggers = document.querySelectorAll(
+  "[data-toolkit-modal-open]",
+);
+const toolkitCloseTriggers = document.querySelectorAll(
+  "[data-toolkit-modal-close]",
+);
+
+if (toolkitModal) {
+  const openModal = () => {
+    toolkitModal.classList.add("is-open");
+    toolkitModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("toolkit-modal-open");
+  };
+
+  const closeModal = () => {
+    toolkitModal.classList.remove("is-open");
+    toolkitModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("toolkit-modal-open");
+  };
+
+  toolkitOpenTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", openModal);
+  });
+
+  toolkitCloseTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && toolkitModal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+}
