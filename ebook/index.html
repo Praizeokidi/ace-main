@@ -2588,66 +2588,70 @@
 
 
     <!-- ABOUT THE AUTHOR SKELETON: place immediately before #about-author -->
-    <div id="author-skeleton" class="skel-author-wrapper" aria-hidden="true">
-      <div class="shell">
-        <div class="skel-author-intro">
-          <div class="skel-shimmer skel-author-eyebrow"></div>
-          <div class="skel-shimmer skel-author-rule"></div>
-        </div>
+    <div id="author-master-wrapper" class="skel-author-wrapper" style="position: relative;" aria-hidden="true">
 
-        <div class="skel-author-grid">
-          <!-- Matches .author-editorial__portrait-column -->
-          <div class="skel-author-visual">
-            <div class="skel-shimmer skel-author-portrait">
-              <div class="skel-author-ring"></div>
-              <div class="skel-shimmer skel-author-initials"></div>
-              <div class="skel-shimmer skel-author-portrait-label"></div>
-            </div>
-
-            <div class="skel-author-caption">
-              <div class="skel-shimmer skel-author-caption-number"></div>
-              <div class="skel-author-caption-copy">
-                <div class="skel-shimmer skel-author-caption-line"></div>
-                <div class="skel-shimmer skel-author-caption-line skel-author-caption-line-short"></div>
-              </div>
-            </div>
+      <!-- 1. SKELETON STATE -->
+      <div id="author-skeleton" class="skel-author-wrapper">
+        <div class="shell">
+          <div class="skel-author-intro">
+            <div class="skel-shimmer skel-author-eyebrow"></div>
+            <div class="skel-shimmer skel-author-rule"></div>
           </div>
 
-          <!-- Matches .author-editorial__content -->
-          <div class="skel-author-copy">
-            <div class="skel-shimmer skel-author-title"></div>
-            <div class="skel-shimmer skel-author-lead"></div>
-            <div class="skel-shimmer skel-author-lead skel-author-lead-short"></div>
+          <div class="skel-author-grid">
+            <!-- Matches .author-editorial__portrait-column -->
+            <div class="skel-author-visual">
+              <div class="skel-shimmer skel-author-portrait">
+                <div class="skel-author-ring"></div>
+                <div class="skel-shimmer skel-author-initials"></div>
+                <div class="skel-shimmer skel-author-portrait-label"></div>
+              </div>
 
-            <div class="skel-author-identity">
-              <div class="skel-shimmer skel-author-name"></div>
-              <div class="skel-shimmer skel-author-role"></div>
+              <div class="skel-author-caption">
+                <div class="skel-shimmer skel-author-caption-number"></div>
+                <div class="skel-author-caption-copy">
+                  <div class="skel-shimmer skel-author-caption-line"></div>
+                  <div class="skel-shimmer skel-author-caption-line skel-author-caption-line-short"></div>
+                </div>
+              </div>
             </div>
 
-            <div class="skel-author-credentials">
-              <div class="skel-shimmer skel-author-credential"></div>
-              <div class="skel-shimmer skel-author-credential"></div>
-              <div class="skel-shimmer skel-author-credential"></div>
-              <div class="skel-shimmer skel-author-credential"></div>
-            </div>
+            <!-- Matches .author-editorial__content -->
+            <div class="skel-author-copy">
+              <div class="skel-shimmer skel-author-title"></div>
+              <div class="skel-shimmer skel-author-lead"></div>
+              <div class="skel-shimmer skel-author-lead skel-author-lead-short"></div>
 
-            <div class="skel-author-bio">
-              <div class="skel-shimmer skel-author-bio-line"></div>
-              <div class="skel-shimmer skel-author-bio-line"></div>
-              <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-short"></div>
-              <div class="skel-shimmer skel-author-bio-line"></div>
-              <div class="skel-shimmer skel-author-bio-line"></div>
-              <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-short"></div>
-              <div class="skel-shimmer skel-author-bio-line"></div>
-              <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-medium"></div>
-            </div>
+              <div class="skel-author-identity">
+                <div class="skel-shimmer skel-author-name"></div>
+                <div class="skel-shimmer skel-author-role"></div>
+              </div>
 
-            <div class="skel-shimmer skel-author-quote"></div>
+              <div class="skel-author-credentials">
+                <div class="skel-shimmer skel-author-credential"></div>
+                <div class="skel-shimmer skel-author-credential"></div>
+                <div class="skel-shimmer skel-author-credential"></div>
+                <div class="skel-shimmer skel-author-credential"></div>
+              </div>
+
+              <div class="skel-author-bio">
+                <div class="skel-shimmer skel-author-bio-line"></div>
+                <div class="skel-shimmer skel-author-bio-line"></div>
+                <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-short"></div>
+                <div class="skel-shimmer skel-author-bio-line"></div>
+                <div class="skel-shimmer skel-author-bio-line"></div>
+                <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-short"></div>
+                <div class="skel-shimmer skel-author-bio-line"></div>
+                <div class="skel-shimmer skel-author-bio-line skel-author-bio-line-medium"></div>
+              </div>
+
+              <div class="skel-shimmer skel-author-quote"></div>
+            </div>
           </div>
         </div>
       </div>
       <!-- About the Author section: insert this complete block into ebook/index.html -->
-      <section class="author-editorial" id="about-author" aria-labelledby="author-editorial-title">
+      <section id="about-author-actual" class="author-editorial" aria-labelledby="author-editorial-title">
         <div class="author-editorial__ornament" aria-hidden="true"></div>
 
         <div class="shell">
