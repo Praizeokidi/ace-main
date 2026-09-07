@@ -1151,6 +1151,66 @@
     }
   </style>
 
+  <style>
+    .reveal-section {
+      perspective: 1200px;
+      transform-style: preserve-3d;
+      will-change: opacity, transform;
+      transition:
+        opacity 760ms cubic-bezier(.22, 1, .36, 1),
+        transform 900ms cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .reveal-section.reveal-from-left {
+      transform: translate3d(-72px, 0, -90px) rotateY(-7deg);
+    }
+
+    .reveal-section.reveal-from-right {
+      transform: translate3d(72px, 0, -90px) rotateY(7deg);
+    }
+
+    .reveal-section.is-visible {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) rotateY(0deg);
+    }
+
+    .reveal-item {
+      opacity: 0;
+      transform-style: preserve-3d;
+      will-change: opacity, transform;
+      transition:
+        opacity 680ms cubic-bezier(.22, 1, .36, 1),
+        transform 760ms cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .reveal-item.reveal-item-from-left {
+      transform: translate3d(-46px, 18px, -50px) rotateY(-6deg);
+    }
+
+    .reveal-item.reveal-item-from-right {
+      transform: translate3d(46px, 18px, -50px) rotateY(6deg);
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) rotateY(0deg);
+    }
+
+    .reveal-section:not(.is-visible) {
+      pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .reveal-section,
+      .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+
 
   <style>
     /* ACE brand palette override: #4259a9 with coordinated shades. */
@@ -1535,7 +1595,7 @@
       <nav class="site-menu" id="site-menu" aria-label="Main navigation" data-menu>
         <a href="#intro-actual">About the publication</a>
         <a href="#workbook-actual">What it covers</a>
-        <a href="#training-actual">Training</a>
+        <a href="./training/training.html">Training</a>
         <a href="#faq-actual">FAQ</a>
         <a class="nav-cta" href="#priority-actual">Join priority list <span aria-hidden="true">↗</span></a>
       </nav>
@@ -1567,8 +1627,8 @@
         </div>
       </div>
 
-      <section id="hero-actual" class="hero section-dark" style="display: none; opacity: 0;"
-        aria-labelledby="hero-title">
+      <section id="hero-actual" class="hero section-dark reveal-section reveal-from-left"
+        style="display: none; opacity: 0;" aria-labelledby="hero-title">
         <div class="hero-grid-lines" aria-hidden="true"></div>
         <div class="shell hero-inner">
           <div class="hero-copy">
@@ -1643,8 +1703,8 @@
         </div>
       </div>
 
-      <section id="intro-actual" class="intro section-light" style="display: none; opacity: 0;"
-        aria-labelledby="publication-title">
+      <section id="intro-actual" class="intro section-light reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="publication-title">
         <div class="shell intro-grid">
           <div class="section-label"><span>01</span><span class="label-line"></span><span>About the publication</span>
           </div>
@@ -1753,8 +1813,8 @@
         </div>
       </div>
 
-      <section id="workbook-actual" class="workbook section-light" style="display: none; opacity: 0;"
-        aria-describedby="workbook-description">
+      <section id="workbook-actual" class="workbook section-light reveal-section reveal-from-left"
+        style="display: none; opacity: 0;" aria-describedby="workbook-description">
         <div class="shell">
           <div class="section-heading centered-heading">
             <p class="eyebrow">What the Workbook Covers</p>
@@ -1987,8 +2047,8 @@
         </div>
       </div>
 
-      <section id="audience-actual" class="audiences section-light" style="display: none; opacity: 0;"
-        aria-labelledby="audiences-title">
+      <section id="audience-actual" class="audiences section-light reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="audiences-title">
         <div class="shell">
           <div class="section-heading">
             <div class="section-label"><span>02</span><span class="label-line"></span><span>Who it is for</span></div>
@@ -2180,8 +2240,8 @@
         </div>
       </div>
 
-      <section id="benefits-actual" class="benefits section-dpia-blue" style="display: none; opacity: 0;"
-        aria-labelledby="benefits-title">
+      <section id="benefits-actual" class="benefits section-dpia-blue reveal-section reveal-from-left"
+        style="display: none; opacity: 0;" aria-labelledby="benefits-title">
         <div class="shell">
           <div class="section-heading benefits-heading">
             <div class="section-label section-label-dark"><span>03</span><span class="label-line"></span><span>Why DPIA
@@ -2308,8 +2368,8 @@
 
         </div>
       </div>
-      <section id="toolkit-actual" class="toolkit section-light" style="display: none; opacity: 0;"
-        aria-labelledby="toolkit-title">
+      <section id="toolkit-actual" class="toolkit section-light reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="toolkit-title">
         <div class="shell toolkit-grid">
           <div class="toolkit-art" aria-hidden="true">
             <div class="folder folder-back"></div>
@@ -2381,8 +2441,8 @@
         </div>
       </div>
 
-      <section id="training-actual" class="training section-light" style="display: none; opacity: 0;"
-        aria-labelledby="training-title">
+      <section id="training-actual" class="training section-light reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="training-title">
         <div class="shell training-grid">
           <div>
             <div class="section-label"><span>04</span><span class="label-line"></span><span>Training</span></div>
@@ -2441,8 +2501,8 @@
         </div>
       </div>
 
-      <section id="consultation-actual" class="consultation section-navy" style="display: none; opacity: 0;"
-        aria-labelledby="consultation-title">
+      <section id="consultation-actual" class="consultation section-navy reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="consultation-title">
         <div class="shell consultation-grid">
           <div>
             <p class="eyebrow eyebrow-gold">ACE Data Protection Consulting</p>
@@ -2456,7 +2516,7 @@
                 governance
                 frameworks</span><span>Independent DPIA review</span><span>Management and governance support</span>
             </div>
-            <a class="button button-white" href="../contact.html#consultation">Request Consultation <span
+            <a class="button button-white" href="./consultation/consultation.html">Request Consultation <span
                 aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -2509,8 +2569,8 @@
           </div>
         </div>
       </div>
-      <section id="ecosystem-actual" class="ecosystem section-light" style="display: none; opacity: 0;"
-        aria-labelledby="ecosystem-title">
+      <section id="ecosystem-actual" class="ecosystem section-light reveal-section reveal-from-left"
+        style="display: none; opacity: 0;" aria-labelledby="ecosystem-title">
         <div class="shell">
           <div class="section-heading centered-heading">
             <p class="eyebrow">Product Ecosystem · More than a publication</p>
@@ -2593,8 +2653,8 @@
 
         </div>
       </div>
-      <section id="priority-actual" class="priority section-dpia-blue" style="display: none; opacity: 0;"
-        aria-labelledby="priority-title">
+      <section id="priority-actual" class="priority section-dpia-blue reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="priority-title">
         <div class="shell priority-grid">
           <div class="priority-copy">
             <p class="eyebrow eyebrow-gold">Launching SOON</p>
@@ -2707,7 +2767,8 @@
         </div>
       </div>
       <!-- About the Author section: insert this complete block into ebook/index.html -->
-      <section id="about-author-actual" class="author-editorial" aria-labelledby="author-editorial-title">
+      <section id="about-author-actual" class="author-editorial reveal-section reveal-from-left"
+        aria-labelledby="author-editorial-title">
         <div class="author-editorial__ornament" aria-hidden="true"></div>
 
         <div class="shell">
@@ -2844,7 +2905,8 @@
 
         </div>
       </div>
-      <section id="faq-actual" class="faq section-light" style="display: none; opacity: 0;" aria-labelledby="faq-title">
+      <section id="faq-actual" class="faq section-light reveal-section reveal-from-right"
+        style="display: none; opacity: 0;" aria-labelledby="faq-title">
         <div class="shell faq-grid">
           <div class="faq-intro">
             <p class="eyebrow">Questions, answered</p>
@@ -2908,8 +2970,8 @@
 
         </div>
       </div>
-      <section id="final-actual" class="final-banner section-dpia-blue" style="display: none; opacity: 0;"
-        aria-labelledby="final-title">
+      <section id="final-actual" class="final-banner section-dpia-blue reveal-section reveal-from-left"
+        style="display: none; opacity: 0;" aria-labelledby="final-title">
         <div class="shell final-banner-inner">
           <div>
             <p class="eyebrow eyebrow-gold">Coming Soon · Launching 2026</p>
@@ -2922,7 +2984,9 @@
           <div class="final-actions"><a class="button button-white" href="/about.html">Learn More <span
                 aria-hidden="true">↗</span></a><a class="button button-outline-light" href="#priority-actual">Join
               Priority
-              List <span aria-hidden="true">↗</span></a></div>
+              List <span aria-hidden="true">↗</span></a><a class="button button-white"
+              href="https://www.linkedin.com/company/ace-data-protection-consulting/" target="_blank"
+              rel="noopener noreferrer">Follow ACE on LinkedIn <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
     </div>
@@ -2956,43 +3020,178 @@
   </footer>
 
   <script src="js/dpia-home.js"></script>
+
   <script>
     window.addEventListener('load', function () {
-      // List of sections to transition
+      /*
+       * These are the actual skeleton/content pairs used in your page.
+       * The author section is mapped manually because its IDs do not follow
+       * the normal about-author-skeleton naming pattern.
+       */
       const sections = [
-        { skel: 'hero-skeleton', actual: 'hero-actual' },
-        { skel: 'intro-skeleton', actual: 'intro-actual' },
-        { skel: 'workbook-skeleton', actual: 'workbook-actual' },
-        { skel: 'audience-skeleton', actual: 'audience-actual' },
-        { skel: 'benefits-skeleton', actual: 'benefits-actual' },
-        { skel: 'toolkit-skeleton', actual: 'toolkit-actual' },
-        { skel: 'training-skeleton', actual: 'training-actual' },
-        { skel: 'consultation-skeleton', actual: 'consultation-actual' },
-        { skel: 'ecosystem-skeleton', actual: 'ecosystem-actual' },
-        { skel: 'priority-skeleton', actual: 'priority-actual' },
-        { skel: 'faq-skeleton', actual: 'faq-actual' },
-        { skel: 'final-skeleton', actual: 'final-actual' },
-        { skel: 'author-skeleton', actual: 'about-author-actual' }
-
+        {
+          skeleton: 'hero-skeleton',
+          actual: 'hero-actual'
+        },
+        {
+          skeleton: 'intro-skeleton',
+          actual: 'intro-actual'
+        },
+        {
+          skeleton: 'workbook-skeleton',
+          actual: 'workbook-actual'
+        },
+        {
+          skeleton: 'audience-skeleton',
+          actual: 'audience-actual'
+        },
+        {
+          skeleton: 'benefits-skeleton',
+          actual: 'benefits-actual'
+        },
+        {
+          skeleton: 'toolkit-skeleton',
+          actual: 'toolkit-actual'
+        },
+        {
+          skeleton: 'training-skeleton',
+          actual: 'training-actual'
+        },
+        {
+          skeleton: 'consultation-skeleton',
+          actual: 'consultation-actual'
+        },
+        {
+          skeleton: 'ecosystem-skeleton',
+          actual: 'ecosystem-actual'
+        },
+        {
+          skeleton: 'priority-skeleton',
+          actual: 'priority-actual'
+        },
+        {
+          skeleton: 'faq-skeleton',
+          actual: 'faq-actual'
+        },
+        {
+          skeleton: 'final-skeleton',
+          actual: 'final-actual'
+        },
+        {
+          skeleton: 'author-skeleton',
+          actual: 'about-author-actual'
+        }
       ];
 
-      setTimeout(() => {
-        sections.forEach(section => {
-          const skelEl = document.getElementById(section.skel);
-          const actualEl = document.getElementById(section.actual);
+      /*
+       * Add reveal classes to the real sections and their direct children.
+       *
+       * Sections alternate:
+       * 1. left
+       * 2. right
+       * 3. left
+       * 4. right
+       *
+       * Components inside each section also alternate left/right.
+       */
+      sections.forEach(function (section, sectionIndex) {
+        const actualElement = document.getElementById(section.actual);
 
-          if (skelEl) skelEl.style.display = 'none';
-          if (actualEl) {
-            actualEl.style.display = 'block';
-            setTimeout(() => {
-              actualEl.style.transition = 'opacity 0.8s ease-out';
-              actualEl.style.opacity = '1';
-            }, 50);
+        if (!actualElement) {
+          console.warn(
+            'Reveal section not found:',
+            section.actual
+          );
+          return;
+        }
+
+        actualElement.classList.add(
+          'reveal-section',
+          sectionIndex % 2 === 0
+            ? 'reveal-from-left'
+            : 'reveal-from-right'
+        );
+
+        Array.from(actualElement.children).forEach(function (
+          item,
+          itemIndex
+        ) {
+          item.classList.add(
+            'reveal-item',
+            itemIndex % 2 === 0
+              ? 'reveal-item-from-left'
+              : 'reveal-item-from-right'
+          );
+        });
+      });
+
+      /*
+       * Wait for the skeletons to display for 800 milliseconds.
+       * After that:
+       * 1. Hide the skeleton.
+       * 2. Display the actual content.
+       * 3. Animate the section.
+       * 4. Stagger the components inside the section.
+       */
+      setTimeout(function () {
+        sections.forEach(function (section) {
+          const skeletonElement =
+            document.getElementById(section.skeleton);
+
+          const actualElement =
+            document.getElementById(section.actual);
+
+          if (!actualElement) {
+            return;
           }
+
+          /*
+           * Hide the matching skeleton.
+           */
+          if (skeletonElement) {
+            skeletonElement.style.display = 'none';
+          }
+
+          /*
+           * Display the real content in its original layout.
+           *
+           * Use an empty string instead of "block" so that sections
+           * using flex, grid, or other display rules continue to work.
+           */
+          actualElement.style.display = 'block';
+          actualElement.style.opacity = '0';
+
+          /*
+           * Wait for the browser to paint the initial hidden state.
+           * The second animation frame then activates the reveal.
+           */
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              actualElement.classList.add('is-visible');
+
+              const revealItems =
+                actualElement.querySelectorAll(
+                  ':scope > .reveal-item'
+                );
+
+              revealItems.forEach(function (item, itemIndex) {
+                /*
+                 * Each component waits slightly longer than the previous one.
+                 */
+                item.style.transitionDelay =
+                  260 + itemIndex * 110 + 'ms';
+
+                setTimeout(function () {
+                  item.classList.add('is-visible');
+                }, 120 + itemIndex * 110);
+              });
+            });
+          });
         });
       }, 800);
     });
   </script>
+
 
   <div class="toolkit-modal" data-toolkit-modal aria-hidden="true">
     <div class="toolkit-modal-backdrop" data-toolkit-modal-close></div>

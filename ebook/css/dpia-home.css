@@ -1695,3 +1695,23 @@ details p {
 #faq-title {
   color: #000 !important;
 }
+
+.button-linkedin {
+  background: #4259a9;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.4);
+}
+
+.button-linkedin:hover,
+.button-linkedin:focus-visible {
+  background: #ffffff;
+  color: #2f2f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.5);
+}
