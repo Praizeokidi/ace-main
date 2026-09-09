@@ -1585,7 +1585,7 @@
 
   <header class="site-header" data-header>
     <div class="shell nav-wrap">
-      <a class="brand" href="../" aria-label="ACE Data Protection Consulting home">
+      <a class="brand" href="/index.html" aria-label="ACE Data Protection Consulting home">
         <img src="../images/logo.png" alt="ACE Data Protection Consulting" width="156" height="70">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
@@ -1642,7 +1642,7 @@
                   aria-hidden="true">↗</span></a>
               <a class="button button-outline-light" href="./training/training.html">Book DPIA Training <span
                   aria-hidden="true">↗</span></a>
-              <a class="button button-outline-light" href="./consultation/consultation.html">Request Consultation <span
+              <a class="text-link text-link-light" href="./consultation/consultation.html">Request Consultation <span
                   aria-hidden="true">→</span></a>
             </div>
             <p class="foreword"><span class="foreword-mark">✦</span> Includes a Foreword by Dr Vincent Olatunji,
@@ -2994,8 +2994,8 @@
 
   <footer class="site-footer">
     <div class="shell footer-grid">
-      <div><a class="brand footer-brand" href="../"><img src="../images/logo.png" alt="ACE Data Protection Consulting"
-            width="140" height="63"></a>
+      <div><a class="brand footer-brand" href="index.html"><img src="../images/logo.png"
+            alt="ACE Data Protection Consulting" width="140" height="63"></a>
         <p style="color: #ffffff;">Practical data protection, privacy and responsible technology guidance for
           organisations across EMEA.</p>
       </div>

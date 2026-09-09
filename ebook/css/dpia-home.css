@@ -100,7 +100,7 @@ button {
 }
 
 .topbar {
-  background: var(--navy-deep);
+  background: #4259a9;
   color: rgba(255, 255, 255, 0.68);
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -388,6 +388,7 @@ em {
 .button-white:focus-visible {
   background: var(--navy);
   color: #fff;
+  border-color: white;
 }
 .button-outline-light {
   border-color: rgba(255, 255, 255, 0.5);
