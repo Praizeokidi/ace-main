@@ -33,7 +33,8 @@
     #priority-actual,
     #faq-actual,
     #final-actual,
-    #about-author-actual {
+    #about-author-actual,
+    #audio-actual {
       display: none;
       opacity: 0;
     }
@@ -229,6 +230,8 @@
       margin-bottom: 8px;
     }
 
+
+
     /* --- BENEFITS SECTION SKELETON (DARK THEME) --- */
     .skel-benefits-wrapper {
       background: #0f172a;
@@ -275,6 +278,43 @@
     }
 
 
+    .skel-audio-wrapper {
+      background: #0f172a;
+      padding: 100px 0;
+    }
+
+    .skel-audio-player {
+      flex: 0 0 340px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
+    }
+
+    .skel-audio-bars {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      height: 40px;
+    }
+
+    .skel-audio-bars span {
+      flex: 1;
+      height: 60%;
+      border-radius: 2px;
+      background: rgba(210, 169, 93, 0.15);
+    }
+
+    .skel-audio-bars span:nth-child(2n) {
+      height: 90%;
+    }
+
+    .skel-audio-bars span:nth-child(3n) {
+      height: 40%;
+    }
 
 
     /* --- TRAINING SECTION SKELETON --- */
@@ -1984,6 +2024,85 @@
 
     </div>
 
+    <!-- MASTER AUDIO WRAPPER -->
+    <div id="audio-master-wrapper" style="position: relative;">
+
+      <!-- 1. SKELETON STATE -->
+      <div id="audio-skeleton" class="skel-audio-wrapper">
+        <div class="shell audio-grid" style="display:flex; gap:60px; align-items:center;">
+          <div style="flex:1;">
+            <div class="skel-shimmer skel-intro-eyebrow" style="background:#d2a95d; opacity:.25;"></div>
+            <div class="skel-shimmer skel-intro-h2" style="background:#fff; opacity:.08;"></div>
+            <div class="skel-shimmer skel-text-line" style="width:70%; opacity:.2;"></div>
+          </div>
+          <div class="skel-audio-player">
+            <div class="skel-shimmer" style="width:88px;height:88px;border-radius:50%;background:#d2a95d;opacity:.25;">
+            </div>
+            <div class="skel-audio-bars">
+              <span class="skel-shimmer"></span><span class="skel-shimmer"></span><span class="skel-shimmer"></span>
+              <span class="skel-shimmer"></span><span class="skel-shimmer"></span><span class="skel-shimmer"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="audio-actual" class="audio-teaser section-dark reveal-section reveal-from-left"
+        style="display:none; opacity:0;" aria-labelledby="audio-title">
+        <div class="audio-glow" aria-hidden="true"></div>
+        <div class="shell audio-grid">
+          <div class="audio-copy">
+            <p class="eyebrow eyebrow-gold"><span class="eyebrow-rule"></span>Now Playing · DPIA Made Easy in 60 Seconds
+            </p>
+            <h2 id="audio-title">Don't just read about it. <em>Hear it.</em></h2>
+            <p class="audio-description">Press play for a short summary of S. A. Kitchener's DPIA Made Easy on why DPIAs
+              matter, and
+              what to expect inside the Professional Edition.</p>
+            <p class="audio-meta"><span class="audio-meta-dot" aria-hidden="true"></span>Recorded for the DPIA Made Easy
+              launch · Headphones recommended</p>
+          </div>
+
+          <div class="audio-player" data-audio-player>
+            <audio data-audio-element preload="metadata">
+              <source src="../audio/dpia-author-intro.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+
+            <button type="button" class="audio-play-btn" data-audio-toggle aria-label="Play author introduction">
+              <span class="audio-ring audio-ring-1" aria-hidden="true"></span>
+              <span class="audio-ring audio-ring-2" aria-hidden="true"></span>
+              <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true" hidden>
+                <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+              </svg>
+            </button>
+
+            <div class="audio-body">
+              <div class="audio-track-info">
+                <strong>S. A. Kitchener</strong>
+                <span>On "DPIA Made Easy — Professional Edition"</span>
+              </div>
+              <div class="audio-waveform" data-audio-waveform aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="audio-progress-row">
+                <span class="audio-time" data-audio-current>0:00</span>
+                <div class="audio-progress-track">
+                  <div class="audio-progress-fill" data-audio-progress></div>
+                </div>
+                <span class="audio-time" data-audio-duration>0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
     <!-- MASTER AUDIENCE WRAPPER -->
     <div id="audience-master-wrapper" style="position: relative;">
 
@@ -3040,6 +3159,10 @@
         {
           skeleton: 'workbook-skeleton',
           actual: 'workbook-actual'
+        },
+        {
+          skeleton: 'audio-skeleton',
+          actual: 'audio-actual'
         },
         {
           skeleton: 'audience-skeleton',

@@ -1716,3 +1716,216 @@ details p {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(10, 102, 194, 0.5);
 }
+
+/* Audio teaser section */
+.audio-teaser {
+  position: relative;
+  overflow: hidden;
+}
+.audio-glow {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(
+    circle,
+    rgba(210, 169, 93, 0.16),
+    rgba(210, 169, 93, 0) 70%
+  );
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.audio-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 90px;
+  align-items: center;
+}
+.audio-copy h2 {
+  color: #fff;
+}
+.audio-copy h2 em {
+  color: var(--gold);
+  font-style: normal;
+}
+.audio-description {
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+}
+.audio-meta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.audio-meta-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(210, 169, 93, 0.15);
+}
+
+.audio-player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+}
+.audio-play-btn {
+  position: relative;
+  flex: 0 0 auto;
+  width: 76px;
+  height: 76px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--gold), var(--gold-deep));
+  color: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s var(--ease-out);
+}
+.audio-play-btn:hover {
+  transform: scale(1.05);
+}
+.audio-play-btn svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+.audio-ring {
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(210, 169, 93, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+}
+.audio-player.is-playing .audio-ring-1 {
+  animation: audio-pulse 1.8s ease-out infinite;
+}
+.audio-player.is-playing .audio-ring-2 {
+  animation: audio-pulse 1.8s ease-out 0.6s infinite;
+}
+@keyframes audio-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.audio-body {
+  flex: 1;
+  min-width: 0;
+}
+.audio-track-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+.audio-track-info strong {
+  color: #fff;
+  font-size: 14px;
+}
+.audio-track-info span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.audio-waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 34px;
+  margin-bottom: 12px;
+}
+.audio-waveform span {
+  flex: 1;
+  min-width: 2px;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.audio-player.is-playing .audio-waveform span {
+  background: var(--gold);
+  animation: audio-wave 1s ease-in-out infinite;
+}
+.audio-waveform span:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+.audio-waveform span:nth-child(3n) {
+  animation-delay: 0.2s;
+}
+.audio-waveform span:nth-child(4n) {
+  animation-delay: 0.35s;
+}
+@keyframes audio-wave {
+  0%,
+  100% {
+    height: 25%;
+  }
+  50% {
+    height: 90%;
+  }
+}
+
+.audio-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.audio-time {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.audio-progress-track {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.audio-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.1s linear;
+}
+
+@media (max-width: 800px) {
+  .audio-grid {
+    display: block;
+  }
+  .audio-player {
+    margin-top: 35px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .audio-track-info {
+    align-items: center;
+  }
+  .audio-glow {
+    left: -20%;
+  }
+}
