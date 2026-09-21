@@ -2345,3 +2345,1221 @@ details p {
     transform: translate(-55%, -44%) scale(1);
   }
 }
+
+/* =========================================================
+   Final Banner Glassmorphism + Ambient Orbs
+   Add at the bottom of dpia-home.css
+   ========================================================= */
+
+#final-actual.final-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(108, 132, 255, 0.34),
+      transparent 23rem
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(66, 89, 169, 0.3),
+      transparent 27rem
+    ),
+    linear-gradient(135deg, #081d34 0%, #102d4d 56%, #1c3472 100%);
+}
+
+/* Moving orb and grid layer */
+#final-actual.final-banner::before {
+  position: absolute;
+  inset: -18%;
+  z-index: -1;
+
+  background-image:
+    radial-gradient(
+      circle at 17% 34%,
+      rgba(108, 132, 255, 0.34) 0,
+      rgba(66, 89, 169, 0.12) 10rem,
+      transparent 22rem
+    ),
+    radial-gradient(
+      circle at 75% 73%,
+      rgba(66, 89, 169, 0.3) 0,
+      rgba(47, 79, 162, 0.1) 12rem,
+      transparent 24rem
+    ),
+    linear-gradient(
+      90deg,
+      transparent 49.8%,
+      rgba(255, 255, 255, 0.07) 50%,
+      transparent 50.2%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 49.8%,
+      rgba(255, 255, 255, 0.04) 50%,
+      transparent 50.2%
+    );
+
+  background-size:
+    auto,
+    auto,
+    150px 150px,
+    150px 150px;
+
+  content: "";
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent 92%);
+  opacity: 0.7;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Floating glowing orb */
+#final-actual.final-banner::after {
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  z-index: -1;
+
+  width: 235px;
+  height: 235px;
+
+  border: 1px solid rgba(220, 228, 255, 0.16);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(159, 178, 255, 0.2),
+    rgba(66, 89, 169, 0.08) 38%,
+    transparent 70%
+  );
+
+  box-shadow:
+    0 0 38px rgba(108, 132, 255, 0.3),
+    0 0 115px rgba(66, 89, 169, 0.26);
+
+  content: "";
+  opacity: 0.82;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Glass panel containing the existing final-banner content */
+#final-actual .final-banner-inner {
+  position: relative;
+  z-index: 1;
+
+  padding: 38px 40px;
+
+  border: 1px solid rgba(220, 228, 255, 0.2);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.045)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 22px 55px rgba(0, 0, 0, 0.16);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Improve supporting text readability */
+#final-actual .final-banner-support {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+/* Glass-style CTA buttons */
+#final-actual .final-actions .button {
+  border-radius: 4px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+#final-actual .final-actions .button-outline-light {
+  border-color: rgba(220, 228, 255, 0.55);
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Floating animation */
+@media (prefers-reduced-motion: no-preference) {
+  #final-actual.final-banner::before {
+    animation: ace-final-orb-drift 22s ease-in-out infinite alternate;
+  }
+
+  #final-actual.final-banner::after {
+    animation: ace-final-orbit 17s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ace-final-orb-drift {
+  0% {
+    opacity: 0.45;
+    transform: translate3d(-24px, 10px, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0.82;
+    transform: translate3d(26px, -16px, 0) scale(1.08);
+  }
+}
+
+@keyframes ace-final-orbit {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(0, 16px, 0) rotate(-8deg) scale(0.9);
+  }
+
+  100% {
+    opacity: 0.95;
+    transform: translate3d(-42px, -22px, 0) rotate(11deg) scale(1.12);
+  }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  #final-actual .final-banner-inner {
+    padding: 30px 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #final-actual .final-banner-inner {
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+
+  #final-actual.final-banner::after {
+    top: 18%;
+    right: -68px;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  #final-actual.final-banner::before,
+  #final-actual.final-banner::after {
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   Audio Teaser — Subtle Glassmorphism + Ambient Orbs
+   ========================================================= */
+
+#audio-actual.audio-teaser {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 14% 24%,
+      rgba(66, 89, 169, 0.2),
+      transparent 22rem
+    ),
+    linear-gradient(135deg, #0b253f 0%, #102d4d 58%, #172f67 100%);
+}
+
+/* Soft moving blue orb layer */
+#audio-actual.audio-teaser::before {
+  position: absolute;
+  inset: -12%;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 18% 34%,
+      rgba(108, 132, 255, 0.17) 0,
+      rgba(66, 89, 169, 0.06) 9rem,
+      transparent 19rem
+    ),
+    radial-gradient(
+      circle at 78% 76%,
+      rgba(66, 89, 169, 0.14) 0,
+      transparent 20rem
+    );
+
+  content: "";
+  opacity: 0.68;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Small, subtle floating orb */
+#audio-actual.audio-teaser::after {
+  position: absolute;
+  top: 13%;
+  right: 13%;
+  z-index: -1;
+
+  width: 155px;
+  height: 155px;
+
+  border: 1px solid rgba(220, 228, 255, 0.1);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(159, 178, 255, 0.11),
+    transparent 68%
+  );
+
+  box-shadow: 0 0 60px rgba(66, 89, 169, 0.18);
+
+  content: "";
+  opacity: 0.55;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Make the existing gold glow softer */
+#audio-actual .audio-glow {
+  z-index: 0;
+  width: 390px;
+  height: 390px;
+
+  background: radial-gradient(
+    circle,
+    rgba(210, 169, 93, 0.08),
+    transparent 70%
+  );
+
+  opacity: 0.75;
+}
+
+/* Main audio content glass panel */
+#audio-actual .audio-grid {
+  z-index: 1;
+  padding: 32px 34px;
+
+  border: 1px solid rgba(220, 228, 255, 0.12);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 18px 42px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Audio player glass card */
+#audio-actual .audio-player {
+  border-color: rgba(220, 228, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Subtle orb movement */
+@media (prefers-reduced-motion: no-preference) {
+  #audio-actual.audio-teaser::before {
+    animation: ace-audio-orb-drift 28s ease-in-out infinite alternate;
+  }
+
+  #audio-actual.audio-teaser::after {
+    animation: ace-audio-orbit 22s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ace-audio-orb-drift {
+  0% {
+    opacity: 0.42;
+    transform: translate3d(-14px, 7px, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0.72;
+    transform: translate3d(18px, -10px, 0) scale(1.045);
+  }
+}
+
+@keyframes ace-audio-orbit {
+  0% {
+    opacity: 0.38;
+    transform: translate3d(0, 8px, 0) rotate(-5deg) scale(0.95);
+  }
+
+  100% {
+    opacity: 0.68;
+    transform: translate3d(-18px, -12px, 0) rotate(6deg) scale(1.05);
+  }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  #audio-actual .audio-grid {
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #audio-actual .audio-grid {
+    padding: 22px 16px;
+  }
+
+  #audio-actual.audio-teaser::after {
+    top: 8%;
+    right: -52px;
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  #audio-actual.audio-teaser::before,
+  #audio-actual.audio-teaser::after {
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   Benefits Section — Subtle Glassmorphism + Glowing Orbs
+   Add at the bottom of dpia-home.css
+   ========================================================= */
+
+/* Section background */
+#benefits-actual.benefits {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 18%,
+      rgba(66, 89, 169, 0.2),
+      transparent 22rem
+    ),
+    radial-gradient(
+      circle at 88% 84%,
+      rgba(47, 79, 162, 0.16),
+      transparent 24rem
+    ),
+    linear-gradient(135deg, #0b253f 0%, #102d4d 58%, #172f67 100%);
+}
+
+/* Soft ambient orb and grid layer */
+#benefits-actual.benefits::before {
+  position: absolute;
+  inset: -12%;
+  z-index: -1;
+
+  background-image:
+    radial-gradient(
+      circle at 16% 28%,
+      rgba(108, 132, 255, 0.16) 0,
+      rgba(66, 89, 169, 0.06) 9rem,
+      transparent 20rem
+    ),
+    radial-gradient(
+      circle at 78% 75%,
+      rgba(66, 89, 169, 0.14) 0,
+      transparent 21rem
+    ),
+    linear-gradient(
+      90deg,
+      transparent 49.8%,
+      rgba(255, 255, 255, 0.035) 50%,
+      transparent 50.2%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 49.8%,
+      rgba(255, 255, 255, 0.025) 50%,
+      transparent 50.2%
+    );
+
+  background-size:
+    auto,
+    auto,
+    170px 170px,
+    170px 170px;
+
+  content: "";
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), transparent 92%);
+  opacity: 0.62;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Small floating orb */
+#benefits-actual.benefits::after {
+  position: absolute;
+  top: 12%;
+  right: 11%;
+  z-index: -1;
+
+  width: 170px;
+  height: 170px;
+
+  border: 1px solid rgba(220, 228, 255, 0.1);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(159, 178, 255, 0.12),
+    rgba(66, 89, 169, 0.04) 42%,
+    transparent 70%
+  );
+
+  box-shadow:
+    0 0 55px rgba(66, 89, 169, 0.18),
+    0 0 100px rgba(108, 132, 255, 0.1);
+
+  content: "";
+  opacity: 0.58;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Keep the content above the decorative layers */
+#benefits-actual.benefits > .shell {
+  position: relative;
+  z-index: 1;
+}
+
+/* Improve heading readability */
+#benefits-actual .benefits-heading h2 {
+  color: #ffffff;
+}
+
+#benefits-actual .benefits-heading h2 em {
+  color: #d2a95d;
+  font-style: normal;
+}
+
+#benefits-actual .benefits-heading > div:last-child > p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Glass card styling */
+#benefits-actual .icon-card-elite {
+  position: relative;
+  min-height: 230px;
+  padding: 26px 24px;
+
+  border: 1px solid rgba(220, 228, 255, 0.14);
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.095),
+    rgba(255, 255, 255, 0.035)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 32px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Restrained hover lift */
+#benefits-actual .icon-card-elite:hover {
+  border-color: rgba(159, 178, 255, 0.34);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 20px 42px rgba(0, 0, 0, 0.18);
+
+  transform: translateY(-4px);
+}
+
+/* Glass icon badge */
+#benefits-actual .icon-badge-elite {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  place-items: center;
+
+  border: 1px solid rgba(210, 169, 93, 0.38);
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(66, 89, 169, 0.42),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  color: #d2a95d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 20px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#benefits-actual .icon-badge-elite svg {
+  width: 23px;
+  height: 23px;
+}
+
+/* Card text */
+#benefits-actual .icon-card-elite h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+#benefits-actual .icon-card-elite p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Subtle column separation */
+#benefits-actual .elite-column {
+  min-width: 0;
+}
+
+/* Soft movement for the background only */
+@media (prefers-reduced-motion: no-preference) {
+  #benefits-actual.benefits::before {
+    animation: ace-benefits-orb-drift 30s ease-in-out infinite alternate;
+  }
+
+  #benefits-actual.benefits::after {
+    animation: ace-benefits-orbit 24s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ace-benefits-orb-drift {
+  0% {
+    opacity: 0.42;
+    transform: translate3d(-14px, 8px, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0.68;
+    transform: translate3d(18px, -12px, 0) scale(1.045);
+  }
+}
+
+@keyframes ace-benefits-orbit {
+  0% {
+    opacity: 0.38;
+    transform: translate3d(0, 8px, 0) rotate(-5deg) scale(0.95);
+  }
+
+  100% {
+    opacity: 0.64;
+    transform: translate3d(-20px, -13px, 0) rotate(6deg) scale(1.05);
+  }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  #benefits-actual .icon-card-elite {
+    min-height: 210px;
+    padding: 23px 21px;
+  }
+
+  #benefits-actual.benefits::after {
+    right: 3%;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  #benefits-actual .icon-card-elite {
+    min-height: 0;
+    padding: 22px 19px;
+    border-radius: 12px;
+  }
+
+  #benefits-actual .icon-badge-elite {
+    width: 43px;
+    height: 43px;
+    margin-bottom: 18px;
+  }
+
+  #benefits-actual.benefits::after {
+    top: 7%;
+    right: -55px;
+    width: 125px;
+    height: 125px;
+  }
+}
+
+/* Reduced-motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  #benefits-actual.benefits::before,
+  #benefits-actual.benefits::after {
+    animation: none !important;
+  }
+
+  #benefits-actual .icon-card-elite {
+    transition: none;
+  }
+
+  #benefits-actual .icon-card-elite:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   Consultation Section — Subtle Glass + Three Left Orbs
+   ========================================================= */
+
+#consultation-actual.consultation {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0b253f 0%, #102d4d 58%, #172f67 100%);
+}
+
+/* Large orb: far left, lower opacity */
+#consultation-actual.consultation::before {
+  position: absolute;
+  top: 16%;
+  left: -170px;
+  z-index: -1;
+
+  width: 430px;
+  height: 430px;
+
+  border: 1px solid rgba(159, 178, 255, 0.08);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(108, 132, 255, 0.17),
+    rgba(66, 89, 169, 0.06) 42%,
+    transparent 72%
+  );
+
+  box-shadow: 0 0 110px rgba(66, 89, 169, 0.16);
+
+  content: "";
+  opacity: 0.52;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Main glass panel */
+#consultation-actual .consultation-grid {
+  position: relative;
+  z-index: 1;
+
+  padding: 34px 38px;
+
+  border: 1px solid rgba(220, 228, 255, 0.12);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 18px 42px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Medium orb: upper-left/middle */
+#consultation-actual .consultation-grid::before {
+  position: absolute;
+  top: 5%;
+  left: 16%;
+  z-index: -1;
+
+  width: 220px;
+  height: 220px;
+
+  border: 1px solid rgba(159, 178, 255, 0.1);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(108, 132, 255, 0.13),
+    rgba(66, 89, 169, 0.04) 45%,
+    transparent 72%
+  );
+
+  box-shadow: 0 0 70px rgba(108, 132, 255, 0.14);
+
+  content: "";
+  opacity: 0.62;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Small orb: lower-left/middle */
+#consultation-actual .consultation-grid::after {
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
+  z-index: -1;
+
+  width: 92px;
+  height: 92px;
+
+  border: 1px solid rgba(210, 169, 93, 0.18);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(210, 169, 93, 0.15),
+    rgba(66, 89, 169, 0.05) 48%,
+    transparent 74%
+  );
+
+  box-shadow: 0 0 42px rgba(210, 169, 93, 0.15);
+
+  content: "";
+  opacity: 0.74;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Keep consultation content above the orbs */
+#consultation-actual .consultation-right {
+  position: relative;
+  z-index: 1;
+}
+
+#consultation-actual .consultation-list span,
+#consultation-actual .button-white {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA refinement */
+#consultation-actual .button-white {
+  border-radius: 4px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Independent orb trajectories */
+@media (prefers-reduced-motion: no-preference) {
+  #consultation-actual.consultation::before {
+    animation: ace-consultation-orb-large 32s ease-in-out infinite alternate;
+  }
+
+  #consultation-actual .consultation-grid::before {
+    animation: ace-consultation-orb-medium 24s ease-in-out infinite alternate;
+  }
+
+  #consultation-actual .consultation-grid::after {
+    animation: ace-consultation-orb-small 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ace-consultation-orb-large {
+  0% {
+    opacity: 0.38;
+    transform: translate3d(-12px, 14px, 0) scale(0.96);
+  }
+
+  100% {
+    opacity: 0.56;
+    transform: translate3d(26px, -18px, 0) scale(1.05);
+  }
+}
+
+@keyframes ace-consultation-orb-medium {
+  0% {
+    opacity: 0.46;
+    transform: translate3d(8px, -10px, 0) scale(0.95);
+  }
+
+  100% {
+    opacity: 0.72;
+    transform: translate3d(-22px, 18px, 0) scale(1.06);
+  }
+}
+
+@keyframes ace-consultation-orb-small {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(-5px, 7px, 0) scale(0.9);
+  }
+
+  100% {
+    opacity: 0.86;
+    transform: translate3d(18px, -16px, 0) scale(1.12);
+  }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  #consultation-actual .consultation-grid {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+
+  #consultation-actual .consultation-grid::after {
+    left: 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #consultation-actual .consultation-grid {
+    padding: 24px 18px;
+  }
+
+  #consultation-actual.consultation::before {
+    top: 28%;
+    left: -245px;
+    width: 360px;
+    height: 360px;
+  }
+
+  #consultation-actual .consultation-grid::before {
+    left: 8%;
+    width: 160px;
+    height: 160px;
+  }
+
+  #consultation-actual .consultation-grid::after {
+    bottom: 8%;
+    left: 52%;
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* Reduced-motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  #consultation-actual.consultation::before,
+  #consultation-actual .consultation-grid::before,
+  #consultation-actual .consultation-grid::after {
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   Priority Section — Subtle Glass + Three Dynamic Orbs
+
+   Orb 1: left
+   Orb 2: right
+   Orb 3: floating above top center
+   ========================================================= */
+
+#priority-actual.priority {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #102d4d 0%, #2f4fa2 58%, #4259a9 100%);
+}
+
+/* =========================================================
+   Orb 1 — Left
+   Larger, soft, slow-moving blue orb
+   ========================================================= */
+
+#priority-actual.priority::before {
+  position: absolute;
+  top: 22%;
+  left: -135px;
+  z-index: -1;
+
+  width: 360px;
+  height: 360px;
+
+  border: 1px solid rgba(220, 228, 255, 0.1);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(108, 132, 255, 0.22),
+    rgba(66, 89, 169, 0.08) 44%,
+    transparent 72%
+  );
+
+  box-shadow: 0 0 105px rgba(108, 132, 255, 0.2);
+
+  content: "";
+  opacity: 0.62;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* =========================================================
+   Main Glass Content Panel
+   ========================================================= */
+
+#priority-actual .priority-grid {
+  position: relative;
+  z-index: 1;
+
+  padding: 34px 38px;
+
+  border: 1px solid rgba(220, 228, 255, 0.18);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.045)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 22px 52px rgba(16, 45, 77, 0.2);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   Orb 2 — Right
+   Medium-size, brighter blue orb
+   ========================================================= */
+
+#priority-actual.priority::after {
+  position: absolute;
+  right: -55px;
+  bottom: 8%;
+  z-index: -1;
+
+  width: 235px;
+  height: 235px;
+
+  border: 1px solid rgba(159, 178, 255, 0.14);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(159, 178, 255, 0.19),
+    rgba(66, 89, 169, 0.07) 43%,
+    transparent 72%
+  );
+
+  box-shadow: 0 0 85px rgba(108, 132, 255, 0.22);
+
+  content: "";
+  opacity: 0.7;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* =========================================================
+   Orb 3 — Above the Top Center
+   Small gold-and-blue hovering orb
+   ========================================================= */
+
+#priority-actual .priority-grid::before {
+  position: absolute;
+  top: -82px;
+  left: 50%;
+  z-index: -1;
+
+  width: 148px;
+  height: 148px;
+
+  border: 1px solid rgba(210, 169, 93, 0.2);
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(210, 169, 93, 0.2),
+    rgba(108, 132, 255, 0.08) 43%,
+    transparent 72%
+  );
+
+  box-shadow:
+    0 0 48px rgba(210, 169, 93, 0.2),
+    0 0 95px rgba(108, 132, 255, 0.14);
+
+  content: "";
+  opacity: 0.78;
+  pointer-events: none;
+  transform: translateX(-50%);
+  will-change: transform, opacity;
+}
+
+/* Keep the priority content above the decorative orbs */
+#priority-actual .priority-copy,
+#priority-actual .priority-form {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   Glass Priority Form
+   ========================================================= */
+
+#priority-actual .priority-form {
+  border: 1px solid rgba(220, 228, 255, 0.18);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 18px 42px rgba(16, 45, 77, 0.16);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#priority-actual .priority-form input {
+  border-color: rgba(66, 89, 169, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+#priority-actual .priority-form .button {
+  border-radius: 4px;
+  box-shadow: 0 10px 22px rgba(16, 45, 77, 0.14);
+}
+
+/* =========================================================
+   Independent Orb Animations
+   ========================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  #priority-actual.priority::before {
+    animation: ace-priority-orb-left 31s ease-in-out infinite alternate;
+  }
+
+  #priority-actual.priority::after {
+    animation: ace-priority-orb-right 23s ease-in-out infinite alternate;
+  }
+
+  #priority-actual .priority-grid::before {
+    animation: ace-priority-orb-top 17s ease-in-out infinite alternate;
+  }
+}
+
+/* Left orb trajectory */
+@keyframes ace-priority-orb-left {
+  0% {
+    opacity: 0.42;
+    transform: translate3d(-12px, 14px, 0) scale(0.95);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: translate3d(28px, -20px, 0) scale(1.07);
+  }
+}
+
+/* Right orb trajectory */
+@keyframes ace-priority-orb-right {
+  0% {
+    opacity: 0.48;
+    transform: translate3d(10px, 12px, 0) rotate(-5deg) scale(0.93);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: translate3d(-30px, -18px, 0) rotate(8deg) scale(1.08);
+  }
+}
+
+/* Top-center orb trajectory */
+@keyframes ace-priority-orb-top {
+  0% {
+    opacity: 0.42;
+    transform: translateX(-50%) translate3d(-12px, 8px, 0) scale(0.9);
+  }
+
+  100% {
+    opacity: 0.86;
+    transform: translateX(-50%) translate3d(15px, -22px, 0) scale(1.1);
+  }
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 800px) {
+  #priority-actual .priority-grid {
+    padding: 28px 24px;
+    border-radius: 17px;
+  }
+
+  #priority-actual.priority::before {
+    left: -190px;
+  }
+
+  #priority-actual.priority::after {
+    right: -95px;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 480px) {
+  #priority-actual .priority-grid {
+    padding: 24px 18px;
+  }
+
+  #priority-actual .priority-grid::before {
+    top: -58px;
+    width: 105px;
+    height: 105px;
+  }
+
+  #priority-actual.priority::before {
+    top: 35%;
+    left: -225px;
+    width: 300px;
+    height: 300px;
+  }
+
+  #priority-actual.priority::after {
+    right: -110px;
+    bottom: 14%;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  #priority-actual.priority::before,
+  #priority-actual.priority::after,
+  #priority-actual .priority-grid::before {
+    animation: none !important;
+  }
+}

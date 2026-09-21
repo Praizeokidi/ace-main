@@ -1259,3 +1259,147 @@
     line-height: 1.55;
   }
 }
+
+/* =========================================================
+   Training Aside — Consultation Form Aside Visual Treatment
+   Original training wording is preserved
+   ========================================================= */
+
+.training-aside {
+  position: sticky;
+  top: 25px;
+  display: grid;
+  gap: 16px;
+}
+
+/* Match the consultation card dimensions */
+.training-aside-card,
+.training-aside .privacy-card {
+  padding: 28px;
+  border: 1px solid rgba(66, 89, 169, 0.14);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(16, 45, 77, 0.08);
+}
+
+/* Main training card */
+.training-aside-card {
+  background: linear-gradient(135deg, #2f4fa2 0%, #102d4d 100%) !important;
+
+  color: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 36px rgba(16, 45, 77, 0.18);
+}
+
+/* Original “A tailored pathway” label */
+.training-aside-card .eyebrow,
+.training-aside .privacy-card .eyebrow {
+  margin-bottom: 16px;
+  color: #4259a9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* White label on the blue training card */
+.training-aside-card .eyebrow {
+  color: #ffffff !important;
+}
+
+/* Original training heading */
+.training-aside-card h3 {
+  margin-bottom: 14px;
+  color: #ffffff !important;
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+/* Original training description */
+.training-aside-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* Divider */
+.training-aside .aside-rule {
+  width: 45px;
+  height: 1px;
+  margin: 22px 0 17px;
+  background: #ffffff !important;
+}
+
+/* Original “Not sure which programme…” text */
+.training-aside-card .aside-small {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 10px;
+}
+
+/* Privacy card */
+.training-aside .privacy-card {
+  background: #ffffff;
+}
+
+.training-aside .privacy-card > p:not(.eyebrow) {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ACE Privacy Notice link */
+.training-aside .privacy-card a {
+  color: #4259a9;
+  font-weight: 800;
+}
+
+/* Original training consent row */
+.training-aside .consent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.training-aside .consent-row input {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  accent-color: #4259a9;
+}
+
+/* Original Request DPIA Training button */
+.training-aside .training-submit {
+  width: 100%;
+  min-height: 58px;
+  border: 0;
+  border-radius: 2px;
+  background: #4259a9;
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(66, 89, 169, 0.12);
+}
+
+.training-aside .training-submit:hover,
+.training-aside .training-submit:focus-visible {
+  background: #24366f;
+}
+
+/* Preserve tablet behavior */
+@media (max-width: 900px) {
+  .training-aside {
+    position: static;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Preserve mobile behavior */
+@media (max-width: 650px) {
+  .training-aside {
+    grid-template-columns: 1fr;
+  }
+}
