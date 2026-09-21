@@ -125,7 +125,7 @@
     submitLabel.textContent = "Sending request…";
 
     try {
-      const response = await fetch("/api/public-submissions/training", {
+      const response = await fetch("/api/dpia-training", {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },

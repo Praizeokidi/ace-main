@@ -2666,7 +2666,7 @@
                 package
                 information</span></div>
           </div>
-          <form class="priority-form" data-priority-form action="/api/public-submissions/priority" method="POST">
+          <form class="priority-form" data-priority-form action="/api/priority-list" method="POST">
             <div class="form-heading">
               <span>Reserve your place</span>
             </div>
@@ -3233,7 +3233,7 @@
       button.innerHTML = 'Submitting…';
 
       try {
-        const response = await fetch('/api/public-submissions/priority', {
+        const response = await fetch('/api/priority-list', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

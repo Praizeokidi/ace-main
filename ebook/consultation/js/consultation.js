@@ -185,7 +185,7 @@
     submitArrow.textContent = "…";
 
     try {
-      const response = await fetch("/api/public-submissions/consultation", {
+      const response = await fetch("/api/dpia-consultation", {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },
@@ -222,6 +222,57 @@
       submitLabel.textContent = "Book a DPIA Consultation";
       submitArrow.textContent = "↗";
     }
+  });
+})();
+
+(() => {
+  const lifecycle = document.querySelector(".lifecycle-track");
+  const detail = document.querySelector("#lifecycle-detail");
+
+  if (!lifecycle || !detail) return;
+
+  const lifecycleContent = {
+    screening:
+      "Screening clarifies whether a DPIA is required and identifies the initial decision context.",
+
+    scoping:
+      "Scoping defines the processing activity, systems, data flows, stakeholders, and boundaries.",
+
+    assessment:
+      "Assessment identifies potential privacy risks, affected individuals, and likely impacts.",
+
+    risk: "Risk management turns identified concerns into practical mitigations and accountable ownership.",
+
+    accountability:
+      "Accountability records the decision, residual risk, approvals, review points, and follow-up actions.",
+  };
+
+  const steps = lifecycle.querySelectorAll("[data-lifecycle-step]");
+
+  const activateStep = (step) => {
+    const key = step.dataset.lifecycleStep;
+    const description = lifecycleContent[key];
+
+    steps.forEach((item) => {
+      const isActive = item === step;
+
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    if (description) {
+      detail.textContent = description;
+    }
+  };
+
+  steps.forEach((step) => {
+    step.addEventListener("click", () => {
+      activateStep(step);
+    });
+
+    step.addEventListener("focus", () => {
+      activateStep(step);
+    });
   });
 })();
 

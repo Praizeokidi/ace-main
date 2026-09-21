@@ -153,7 +153,7 @@
     submitLabel.textContent = "Sending request…";
 
     try {
-      const response = await fetch("/api/public-submissions/training", {
+      const response = await fetch("/api/dpia-training", {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },
@@ -177,20 +177,62 @@
   });
 })();
 
-// Reveal the real page after the initial ebook-style skeleton pass.
-document.addEventListener("DOMContentLoaded", () => {
-  const skeleton = document.querySelector("#training-skeleton");
-  const content = document.querySelector("#training-content");
-  if (!skeleton || !content) return;
+//Journey Step ACTIVITY
+(() => {
+  const journey = document.querySelector(".journey-steps");
+  const detail = document.querySelector("#journey-detail");
 
-  const reveal = () => {
-    skeleton.hidden = true;
-    content.classList.add("is-ready");
+  if (!journey || !detail) return;
+
+  const journeyContent = {
+    awareness:
+      "Awareness creates a shared understanding of DPIA purpose, terminology, and organisational responsibility.",
+
+    screening:
+      "Screening helps teams decide whether a proposed processing activity is likely to require a DPIA.",
+
+    scoping:
+      "Scoping defines the processing activity, systems, data flows, stakeholders, and affected individuals.",
+
+    assessment:
+      "Assessment helps participants identify privacy risks, likely impacts, and areas requiring deeper consideration.",
+
+    risk: "Risk management turns identified concerns into practical mitigations, ownership, and follow-up actions.",
+
+    governance:
+      "Governance embeds DPIA decisions into approval, accountability, review, and organisational practice.",
   };
 
-  window.setTimeout(reveal, 700);
-});
+  const steps = journey.querySelectorAll("[data-journey-step]");
 
+  const activateStep = (step) => {
+    const key = step.dataset.journeyStep;
+    const description = journeyContent[key];
+
+    steps.forEach((item) => {
+      const isActive = item === step;
+
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    if (description) {
+      detail.textContent = description;
+    }
+  };
+
+  steps.forEach((step) => {
+    step.addEventListener("click", () => {
+      activateStep(step);
+    });
+
+    step.addEventListener("focus", () => {
+      activateStep(step);
+    });
+  });
+})();
+
+//SKELETON LOADER ACTIVITY
 document.addEventListener("DOMContentLoaded", () => {
   const skeleton = document.querySelector("#training-skeleton");
   const content = document.querySelector("#training-content");
