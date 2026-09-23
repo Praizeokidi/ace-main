@@ -1853,7 +1853,7 @@
 }
 
 .consultation-page .topbar {
-  background: var(--ace-navy);
+  background: linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
   border-bottom: 1px solid rgba(66, 89, 169, 0.42);
 }
 

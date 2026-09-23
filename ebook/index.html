@@ -771,7 +771,7 @@
       --author-blue-deep: #102d4d;
       position: relative;
       overflow: hidden;
-      padding: clamp(56px, 6vw, 100px) 0;
+      padding: clamp(56px, 6vw, 100px) clamp(20px, 4vw, 48px);
       background: var(--cream);
     }
 
@@ -1575,7 +1575,7 @@
     /* Keep the audience cards as a deliberate, centered composition. */
     #audience-actual .elite-grid {
       width: 100%;
-      max-width: 760px;
+      max-width: 840px;
       margin-inline: auto;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
@@ -1592,14 +1592,14 @@
 
     @media (max-width: 1024px) {
       #audience-actual .elite-grid {
-        max-width: 700px;
+        max-width: 760px;
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
       }
     }
 
     @media (max-width: 768px) {
       #audience-actual .elite-grid {
-        max-width: 360px;
+        max-width: 380px;
         grid-template-columns: 1fr !important;
       }
 
@@ -1669,10 +1669,10 @@
         <span class="sr-only">Open navigation menu</span>
       </button>
       <nav class="site-menu" id="site-menu" aria-label="Main navigation" data-menu>
-        <a href="#intro-actual">About the publication</a>
-        <a href="#workbook-actual">What it covers</a>
-        <a href="./training/training.html">Training</a>
-        <a href="#faq-actual">FAQ</a>
+        <a href="#hero-actual">Learn</a>
+        <a href="#toolkit-actual">Implement</a>
+        <a href="#training-actual">Build Capability</a>
+        <a href="#consultation-actual">Get Support</a>
         <a class="nav-cta" href="#priority-actual">Join priority list <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -1738,8 +1738,8 @@
 
         <div class="shell hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow hero-eyebrow" style="color: var(--gold); font-size: medium;"><span class="eyebrow-rule"
-                aria-hidden="true"></span>
+            <p class="eyebrow hero-eyebrow" style="color: var(--gold); font-size: medium;"><span class="journey-step"
+                aria-hidden="true">01</span><span class="eyebrow-rule" aria-hidden="true"></span>
               LEARN</p>
             <h1 id="hero-title">
               DPIA Made Easy
@@ -1749,7 +1749,7 @@
             <p class="hero-description">Practical guidance for organisations and privacy professionals implementing Data
               Privacy Impact Assessments under the Nigeria Data Protection Act.</p>
             <div class="hero-actions">
-              <a class="button button-gold" href="#">Buy the DPIA Made Easy Professional Edition <span
+              <a class="button button-white" href="#">Buy the DPIA Made Easy Professional Edition <span
                   aria-hidden="true">↗</span></a>
               <!-- <a class="button button-gold" href="#priority-actual">Join the Priority List <span
                   aria-hidden="true">↗</span></a> -->
@@ -1824,7 +1824,7 @@
       <section id="intro-actual" class="intro section-light reveal-section reveal-from-right"
         style="display: none; opacity: 0;" aria-labelledby="publication-title">
         <div class="shell intro-grid">
-          <div class="section-label"><span>01</span><span class="label-line"></span><span>About the publication</span>
+          <div class="section-label"><span class="label-line"></span><span>About the publication</span>
           </div>
           <div class="intro-content">
             <p class="eyebrow">From Regulation to Practical Implementation</p>
@@ -2253,7 +2253,7 @@
         style="display: none; opacity: 0;" aria-labelledby="audiences-title">
         <div class="shell">
           <div class="section-heading">
-            <div class="section-label"><span>02</span><span class="label-line"></span><span>Who it is for</span></div>
+            <div class="section-label"><span class="label-line"></span><span>Who it is for</span></div>
             <div>
               <p class="eyebrow">Who Is It For? · Designed for professionals responsible for privacy, risk and
                 responsible
@@ -2446,7 +2446,7 @@
         style="display: none; opacity: 0;" aria-labelledby="benefits-title">
         <div class="shell">
           <div class="section-heading benefits-heading">
-            <div class="section-label section-label-dark"><span>03</span><span class="label-line"></span><span>Why DPIA
+            <div class="section-label section-label-dark"><span class="label-line"></span><span>Why DPIA
                 Made Easy?</span></div>
             <div>
               <p class="eyebrow eyebrow-gold">Built for the work behind the policy</p>
@@ -2573,7 +2573,10 @@
       <section id="toolkit-actual" class="toolkit section-light reveal-section reveal-from-right"
         style="display: none; opacity: 0;" aria-labelledby="toolkit-title">
         <div class="shell toolkit-grid">
-          <div class="toolkit-art" aria-hidden="true">
+          <div class="toolkit-art">
+            <p class="eyebrow hero-eyebrow toolkit-stage-label" style="color: var(--gold); font-size: medium;"><span
+                class="journey-step" aria-hidden="true">02</span><span class="eyebrow-rule" aria-hidden="true"></span>
+              IMPLEMENT</p>
             <div class="folder folder-back"></div>
             <div class="folder folder-front"><span>ACE</span><strong>Implementation<br>TOOLKIT</strong><small>Templates
                 and
@@ -2581,9 +2584,6 @@
             <div class="toolkit-stamp">COMING<br>SOON</div>
           </div>
           <div class="toolkit-copy">
-            <p class="eyebrow hero-eyebrow" style="color: var(--gold); font-size: medium;"><span class="eyebrow-rule"
-                aria-hidden="true"></span>
-              IMPLEMENT</p>
             <h2 id="toolkit-title">ACE DPIA MADE EASY IMPLEMENTATION TOOLKIT</h2>
             <p class="large-lead" style="color: #000;">Turn knowledge into action.</p>
             <p style="color: #000;">The ACE Made EASY Implementation Toolkit is the implementation component to DPIA
@@ -2653,7 +2653,7 @@
         style="display: none; opacity: 0;" aria-labelledby="training-title">
         <div class="shell training-grid">
           <div>
-            <div class="section-label"><span>04</span><span class="label-line"></span><span>DPIA Training</span></div>
+            <div class="section-label"><span>03</span><span class="label-line"></span><span>DPIA Training</span></div>
             <p class="eyebrow">Practical Professional Training</p>
             <h2 id="training-title">Learn how to apply the <em class="highlight-header">methodology</em> in practice.
             </h2>
@@ -2716,7 +2716,8 @@
         style="display: none; opacity: 0;" aria-labelledby="consultation-title">
         <div class="shell consultation-grid">
           <div>
-            <p class="eyebrow eyebrow-gold"> DPIA Consultations & Professional Services</p>
+            <p class="eyebrow eyebrow-gold"><span class="journey-step" aria-hidden="true">04</span><span
+                class="eyebrow-rule" aria-hidden="true"></span> DPIA Consultations &amp; Professional Services</p>
             <h2 id="consultation-title">Need Support With a DPIA?</h2>
             <p>ACE Data Protection Consulting offeres Expert Practical Support for organisations that don't simply want
               to learn about DPIAs but need help apply them.

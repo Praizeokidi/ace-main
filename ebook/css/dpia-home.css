@@ -57,7 +57,7 @@ button {
 }
 /* ACE Brand Topbar */
 .topbar {
-  background-color: #4259a9 !important;
+  background: linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%) !important;
   color: #ffffff; /* This ensures the text stays white and readable */
 }
 
@@ -103,15 +103,45 @@ button {
 }
 
 .topbar {
-  background: #4259a9;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: transparent;
   color: rgba(255, 255, 255, 0.68);
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+.topbar::before,
+.topbar::after {
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+  width: 150px;
+  height: 30px;
+  border: 1px solid rgba(159, 178, 255, 0.2);
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 100%, transparent 0 43%, rgba(159, 178, 255, 0.2) 45% 49%, transparent 51%),
+    radial-gradient(ellipse at 50% 100%, transparent 0 61%, rgba(66, 89, 169, 0.25) 63% 67%, transparent 69%);
+  box-shadow: 0 0 20px rgba(66, 89, 169, 0.16);
+  content: "";
+  opacity: 0.7;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.topbar::before {
+  left: -68px;
+}
+.topbar::after {
+  right: -68px;
+  transform: translateY(-50%) scaleX(-1);
+}
 .topbar-inner {
   min-height: 34px;
   display: flex;
+  position: relative;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -132,6 +162,12 @@ button {
   border-radius: 50%;
   background: var(--gold);
   box-shadow: 0 0 0 4px rgba(210, 169, 93, 0.12);
+}
+
+@media (max-width: 800px) {
+  body.mobile-menu-open {
+    overflow: hidden;
+  }
 }
 
 .site-header {
@@ -782,6 +818,17 @@ em {
   font-weight: 400;
   letter-spacing: 0;
 }
+.journey-step {
+  display: inline-block;
+  margin-right: 9px;
+  color: var(--gold-deep);
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
 .label-line {
   width: 26px;
   height: 1px;
@@ -993,6 +1040,15 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.toolkit-stage-label {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 3;
+  margin: 0;
+  white-space: nowrap;
+  transform: translateX(-50%);
 }
 .folder {
   position: absolute;
@@ -1535,22 +1591,29 @@ details p {
   }
   .menu-toggle {
     display: block;
+    position: relative;
+    z-index: 41;
   }
   .site-menu {
-    position: absolute;
-    top: calc(100% + 1px);
-    right: 17px;
-    left: 17px;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: flex-start;
     gap: 0;
-    padding: 9px;
-    background: #fff;
-    box-shadow: var(--shadow);
+    width: 100vw;
+    height: 100dvh;
+    padding: 112px 34px 40px;
+    overflow-y: auto;
+    background: rgba(8, 29, 52, 0.96);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(40px) saturate(115%) brightness(65%);
+    -webkit-backdrop-filter: blur(40px) saturate(115%) brightness(65%);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-7px);
+    transform: translateY(-10px);
     transition:
       opacity 0.18s var(--ease-out),
       transform 0.18s var(--ease-out);
@@ -1561,13 +1624,20 @@ details p {
     transform: translateY(0);
   }
   .site-menu a {
-    padding: 12px 13px;
+    width: min(100%, 420px);
+    padding: 18px 16px;
+    border-bottom: 1px solid rgba(220, 228, 255, 0.16);
+    color: #ffffff;
+    font-size: 1.08rem;
+    text-align: center;
   }
   .site-menu a:not(.nav-cta)::after {
     display: none;
   }
   .nav-cta {
-    margin-top: 5px;
+    margin-top: 22px;
+    border: 1px solid rgba(220, 228, 255, 0.3);
+    background: linear-gradient(135deg, #4259a9, #2f4fa2);
     text-align: center;
   }
   .section-dark,
@@ -2468,6 +2538,8 @@ details p {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  margin-bottom: 0;
+  border-bottom: 4px solid rgba(210, 169, 93, 0.72);
 
   background:
     radial-gradient(
@@ -2902,7 +2974,7 @@ details p {
 /* Keep the benefits cards in the same centered composition as the audience grid. */
 #benefits-actual .elite-grid {
   width: 100%;
-  max-width: 760px;
+  max-width: 840px;
   margin-inline: auto;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
@@ -2929,14 +3001,14 @@ details p {
 
 @media (max-width: 1024px) {
   #benefits-actual .elite-grid {
-    max-width: 700px;
+    max-width: 760px;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 
 @media (max-width: 768px) {
   #benefits-actual .elite-grid {
-    max-width: 360px;
+    max-width: 380px;
     grid-template-columns: 1fr !important;
   }
 }
@@ -3371,7 +3443,9 @@ details p {
   isolation: isolate;
   overflow: hidden;
 
-  background: linear-gradient(135deg, #102d4d 0%, #2f4fa2 58%, #4259a9 100%);
+  background:
+    radial-gradient(circle at 76% 30%, rgba(66, 89, 169, 0.32), transparent 34rem),
+    linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
 }
 
 /* =========================================================
@@ -3532,7 +3606,14 @@ details p {
 
 #priority-actual .priority-form .button {
   border-radius: 4px;
+  background: linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
+  color: #ffffff;
   box-shadow: 0 10px 22px rgba(16, 45, 77, 0.14);
+}
+
+#priority-actual .priority-form .button:hover,
+#priority-actual .priority-form .button:focus-visible {
+  background: linear-gradient(135deg, #102d4d 0%, #162c68 60%, #4259a9 100%);
 }
 
 /* =========================================================

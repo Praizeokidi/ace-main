@@ -8,8 +8,8 @@
   --ace-footer-navy: #102d4d;
   --ace-footer-deep: #081d34;
   --ace-footer-ink: #eaf0ff;
-  --ace-footer-muted: rgba(234, 240, 255, 0.7);
-  --ace-footer-faint: rgba(234, 240, 255, 0.48);
+  --ace-footer-muted: rgba(234, 240, 255, 0.86);
+  --ace-footer-faint: rgba(234, 240, 255, 0.68);
   --ace-footer-line: rgba(220, 228, 255, 0.17);
   --ace-footer-surface: rgba(255, 255, 255, 0.07);
   --ace-footer-glass: rgba(255, 255, 255, 0.075);
@@ -168,11 +168,9 @@
   padding: 28px 30px;
   border: 1px solid rgba(220, 228, 255, 0.18);
   border-radius: 18px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.105),
-    rgba(255, 255, 255, 0.035)
-  );
+  background:
+    radial-gradient(circle at 18% 0%, rgba(108, 132, 255, 0.28), transparent 17rem),
+    linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 18px 45px rgba(0, 0, 0, 0.12);
@@ -297,7 +295,7 @@
   width: fit-content;
   margin-bottom: 11px;
   color: var(--ace-footer-muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   transition:
     color 180ms ease,
@@ -368,7 +366,7 @@
 .ace-footer__newsletter p {
   margin: 8px 0 14px;
   color: var(--ace-footer-muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -379,7 +377,8 @@
 
 .ace-footer__newsletter-form input {
   min-width: 0;
-  flex: 1;
+  flex: 0 1 260px;
+  max-width: 260px;
   min-height: 44px;
   padding: 11px 12px;
   border: 1px solid rgba(220, 228, 255, 0.24);
@@ -464,7 +463,7 @@
 .ace-footer__contact a,
 .ace-footer__contact span {
   color: var(--ace-footer-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .ace-footer__contact a:hover,
@@ -515,7 +514,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 14px 24px;
-  padding: 18px 26px 22px;
+  padding: 18px 26px 82px;
   border: 1px solid rgba(220, 228, 255, 0.12);
   border-top: 0;
   border-radius: 0 0 18px 18px;
@@ -645,9 +644,18 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .ace-footer__bottom {
+    padding-bottom: 96px;
+  }
+
   .ace-footer__newsletter-form {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .ace-footer__newsletter-form input {
+    width: 100%;
+    max-width: none;
   }
 
   .ace-footer__newsletter-form button {

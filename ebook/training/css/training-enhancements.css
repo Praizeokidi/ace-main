@@ -20,7 +20,7 @@
 }
 
 .training-page .topbar {
-  background: var(--ace-blue-deep);
+  background: linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
   color: rgba(255, 255, 255, 0.86);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
