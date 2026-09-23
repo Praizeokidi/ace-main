@@ -66,3 +66,79 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const player = document.querySelector("[data-audio-player]");
+  if (!player) return;
+
+  const audio = player.querySelector("[data-audio-element]");
+  const toggle = player.querySelector("[data-audio-toggle]");
+  const playIcon = player.querySelector(".icon-play");
+  const pauseIcon = player.querySelector(".icon-pause");
+  const currentTime = player.querySelector("[data-audio-current]");
+  const duration = player.querySelector("[data-audio-duration]");
+  const progress = player.querySelector("[data-audio-progress]");
+
+  if (!audio || !toggle) return;
+
+  const formatTime = (seconds) => {
+    if (!Number.isFinite(seconds)) return "0:00";
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60).toString().padStart(2, "0");
+    return `${minutes}:${remainingSeconds}`;
+  };
+
+  const setPlayingState = (isPlaying) => {
+    player.classList.toggle("is-playing", isPlaying);
+    toggle.setAttribute("aria-label", isPlaying ? "Pause author introduction" : "Play author introduction");
+    if (playIcon) playIcon.hidden = isPlaying;
+    if (pauseIcon) pauseIcon.hidden = !isPlaying;
+  };
+
+  const updateProgress = () => {
+    const percentage = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+    if (currentTime) currentTime.textContent = formatTime(audio.currentTime);
+    if (progress) progress.style.width = `${percentage}%`;
+  };
+
+  toggle.addEventListener("click", async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+      } catch {
+        setPlayingState(false);
+      }
+    } else {
+      audio.pause();
+    }
+  });
+
+  audio.addEventListener("loadedmetadata", () => {
+    if (duration) duration.textContent = formatTime(audio.duration);
+    updateProgress();
+    toggle.disabled = false;
+  });
+
+  audio.addEventListener("timeupdate", updateProgress);
+  audio.addEventListener("play", () => setPlayingState(true));
+  audio.addEventListener("pause", () => setPlayingState(false));
+  audio.addEventListener("ended", () => {
+    setPlayingState(false);
+    audio.currentTime = 0;
+    updateProgress();
+  });
+
+  audio.addEventListener("error", () => {
+    toggle.disabled = true;
+    toggle.setAttribute("aria-label", "Audio preview unavailable");
+    player.classList.add("is-unavailable");
+  });
+
+  toggle.disabled = true;
+  setPlayingState(false);
+  if (audio.readyState >= 1) {
+    if (duration) duration.textContent = formatTime(audio.duration);
+    updateProgress();
+    toggle.disabled = false;
+  }
+});

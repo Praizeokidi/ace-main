@@ -474,6 +474,128 @@ em {
   transform-origin: center;
 }
 
+.ebook-hero-orbs {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ebook-orb {
+  position: absolute;
+  display: block;
+  width: var(--ebook-orb-size);
+  height: var(--ebook-orb-size);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(220, 228, 255, 0.72) 0%,
+    rgba(159, 178, 255, 0.4) 22%,
+    rgba(66, 89, 169, 0.2) 52%,
+    rgba(47, 79, 162, 0) 74%
+  );
+  filter: blur(var(--ebook-orb-blur));
+  opacity: var(--ebook-orb-opacity);
+  mix-blend-mode: screen;
+  transform: translate3d(0, 0, 0);
+  animation: ebook-orb-drift var(--ebook-orb-duration) ease-in-out var(--ebook-orb-delay) infinite alternate;
+}
+
+.ebook-orb-1 {
+  --ebook-orb-size: 156px;
+  --ebook-orb-blur: 3px;
+  --ebook-orb-opacity: 0.3;
+  --ebook-orb-duration: 18s;
+  --ebook-orb-delay: -6s;
+  top: 10%;
+  left: 45%;
+}
+
+.ebook-orb-2 {
+  --ebook-orb-size: 88px;
+  --ebook-orb-blur: 2px;
+  --ebook-orb-opacity: 0.38;
+  --ebook-orb-duration: 13s;
+  --ebook-orb-delay: -10s;
+  top: 18%;
+  right: 12%;
+}
+
+.ebook-orb-3 {
+  --ebook-orb-size: 224px;
+  --ebook-orb-blur: 9px;
+  --ebook-orb-opacity: 0.18;
+  --ebook-orb-duration: 23s;
+  --ebook-orb-delay: -15s;
+  right: 24%;
+  bottom: -13%;
+}
+
+.ebook-orb-4 {
+  --ebook-orb-size: 64px;
+  --ebook-orb-blur: 1px;
+  --ebook-orb-opacity: 0.42;
+  --ebook-orb-duration: 11s;
+  --ebook-orb-delay: -4s;
+  top: 58%;
+  left: 36%;
+}
+
+.ebook-orb-5 {
+  --ebook-orb-size: 126px;
+  --ebook-orb-blur: 5px;
+  --ebook-orb-opacity: 0.24;
+  --ebook-orb-duration: 20s;
+  --ebook-orb-delay: -12s;
+  bottom: 10%;
+  left: 10%;
+}
+
+.ebook-orb-6 {
+  --ebook-orb-size: 54px;
+  --ebook-orb-blur: 1px;
+  --ebook-orb-opacity: 0.46;
+  --ebook-orb-duration: 14s;
+  --ebook-orb-delay: -8s;
+  top: 32%;
+  left: 20%;
+}
+
+.ebook-orb-7 {
+  --ebook-orb-size: 184px;
+  --ebook-orb-blur: 7px;
+  --ebook-orb-opacity: 0.16;
+  --ebook-orb-duration: 25s;
+  --ebook-orb-delay: -19s;
+  top: -14%;
+  right: 31%;
+}
+
+@keyframes ebook-orb-drift {
+  0% {
+    transform: translate3d(-34px, 20px, 0) scale(0.86);
+  }
+
+  35% {
+    transform: translate3d(22px, -28px, 0) scale(1.08);
+  }
+
+  68% {
+    transform: translate3d(58px, 18px, 0) scale(0.94);
+  }
+
+  100% {
+    transform: translate3d(-12px, -44px, 0) scale(1.16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ebook-orb {
+    animation: none;
+  }
+}
+
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -1778,20 +1900,6 @@ details p {
   position: relative;
   overflow: hidden;
 }
-.audio-glow {
-  position: absolute;
-  top: 50%;
-  left: 12%;
-  width: 480px;
-  height: 480px;
-  background: radial-gradient(
-    circle,
-    rgba(210, 169, 93, 0.16),
-    rgba(210, 169, 93, 0) 70%
-  );
-  transform: translateY(-50%);
-  pointer-events: none;
-}
 .audio-grid {
   position: relative;
   z-index: 1;
@@ -1858,6 +1966,14 @@ details p {
 }
 .audio-play-btn:hover {
   transform: scale(1.05);
+}
+.audio-play-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+.audio-player.is-unavailable .audio-track-info span {
+  color: rgba(255, 255, 255, 0.38);
 }
 .audio-play-btn svg {
   width: 26px;
@@ -1980,9 +2096,6 @@ details p {
   }
   .audio-track-info {
     align-items: center;
-  }
-  .audio-glow {
-    left: -20%;
   }
 }
 
@@ -2596,48 +2709,6 @@ details p {
   will-change: transform, opacity;
 }
 
-/* Small, subtle floating orb */
-#audio-actual.audio-teaser::after {
-  position: absolute;
-  top: 13%;
-  right: 13%;
-  z-index: -1;
-
-  width: 155px;
-  height: 155px;
-
-  border: 1px solid rgba(220, 228, 255, 0.1);
-  border-radius: 50%;
-
-  background: radial-gradient(
-    circle,
-    rgba(159, 178, 255, 0.11),
-    transparent 68%
-  );
-
-  box-shadow: 0 0 60px rgba(66, 89, 169, 0.18);
-
-  content: "";
-  opacity: 0.55;
-  pointer-events: none;
-  will-change: transform, opacity;
-}
-
-/* Make the existing gold glow softer */
-#audio-actual .audio-glow {
-  z-index: 0;
-  width: 390px;
-  height: 390px;
-
-  background: radial-gradient(
-    circle,
-    rgba(210, 169, 93, 0.08),
-    transparent 70%
-  );
-
-  opacity: 0.75;
-}
-
 /* Main audio content glass panel */
 #audio-actual .audio-grid {
   z-index: 1;
@@ -2673,10 +2744,6 @@ details p {
   #audio-actual.audio-teaser::before {
     animation: ace-audio-orb-drift 28s ease-in-out infinite alternate;
   }
-
-  #audio-actual.audio-teaser::after {
-    animation: ace-audio-orbit 22s ease-in-out infinite alternate;
-  }
 }
 
 @keyframes ace-audio-orb-drift {
@@ -2688,18 +2755,6 @@ details p {
   100% {
     opacity: 0.72;
     transform: translate3d(18px, -10px, 0) scale(1.045);
-  }
-}
-
-@keyframes ace-audio-orbit {
-  0% {
-    opacity: 0.38;
-    transform: translate3d(0, 8px, 0) rotate(-5deg) scale(0.95);
-  }
-
-  100% {
-    opacity: 0.68;
-    transform: translate3d(-18px, -12px, 0) rotate(6deg) scale(1.05);
   }
 }
 
@@ -2716,19 +2771,11 @@ details p {
   #audio-actual .audio-grid {
     padding: 22px 16px;
   }
-
-  #audio-actual.audio-teaser::after {
-    top: 8%;
-    right: -52px;
-    width: 130px;
-    height: 130px;
-  }
 }
 
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  #audio-actual.audio-teaser::before,
-  #audio-actual.audio-teaser::after {
+  #audio-actual.audio-teaser::before {
     animation: none !important;
   }
 }
@@ -2850,6 +2897,48 @@ details p {
 
 #benefits-actual .benefits-heading > div:last-child > p {
   color: rgba(255, 255, 255, 0.68);
+}
+
+/* Keep the benefits cards in the same centered composition as the audience grid. */
+#benefits-actual .elite-grid {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+#benefits-actual .elite-column {
+  min-width: 0;
+}
+
+/* Hero-colored CTAs for the implementation and capability-building steps. */
+#toolkit-actual .button.dpia-button,
+#training-actual .button.dpia-button {
+  background: linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(16, 45, 77, 0.24);
+}
+
+#toolkit-actual .button.dpia-button:hover,
+#toolkit-actual .button.dpia-button:focus-visible,
+#training-actual .button.dpia-button:hover,
+#training-actual .button.dpia-button:focus-visible {
+  background: linear-gradient(135deg, #102d4d 0%, #162c68 60%, #4259a9 100%);
+}
+
+@media (max-width: 1024px) {
+  #benefits-actual .elite-grid {
+    max-width: 700px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #benefits-actual .elite-grid {
+    max-width: 360px;
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* Glass card styling */

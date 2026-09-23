@@ -92,6 +92,128 @@
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent 88%);
 }
 
+.toolkit-hero-orbs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.toolkit-orb {
+  position: absolute;
+  display: block;
+  width: var(--orb-size);
+  height: var(--orb-size);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(220, 228, 255, 0.72) 0%,
+    rgba(159, 178, 255, 0.4) 22%,
+    rgba(66, 89, 169, 0.2) 52%,
+    rgba(47, 79, 162, 0) 74%
+  );
+  filter: blur(var(--orb-blur));
+  opacity: var(--orb-opacity);
+  mix-blend-mode: screen;
+  transform: translate3d(0, 0, 0);
+  animation: toolkit-orb-drift var(--orb-duration) ease-in-out var(--orb-delay) infinite alternate;
+}
+
+.toolkit-orb-1 {
+  --orb-size: 150px;
+  --orb-blur: 3px;
+  --orb-opacity: 0.34;
+  --orb-duration: 17s;
+  --orb-delay: -5s;
+  top: 8%;
+  left: 48%;
+}
+
+.toolkit-orb-2 {
+  --orb-size: 92px;
+  --orb-blur: 2px;
+  --orb-opacity: 0.38;
+  --orb-duration: 13s;
+  --orb-delay: -9s;
+  top: 16%;
+  right: 9%;
+}
+
+.toolkit-orb-3 {
+  --orb-size: 210px;
+  --orb-blur: 8px;
+  --orb-opacity: 0.2;
+  --orb-duration: 22s;
+  --orb-delay: -14s;
+  right: 22%;
+  bottom: -10%;
+}
+
+.toolkit-orb-4 {
+  --orb-size: 70px;
+  --orb-blur: 1px;
+  --orb-opacity: 0.42;
+  --orb-duration: 11s;
+  --orb-delay: -3s;
+  top: 56%;
+  left: 38%;
+}
+
+.toolkit-orb-5 {
+  --orb-size: 120px;
+  --orb-blur: 5px;
+  --orb-opacity: 0.26;
+  --orb-duration: 19s;
+  --orb-delay: -11s;
+  bottom: 12%;
+  left: 8%;
+}
+
+.toolkit-orb-6 {
+  --orb-size: 58px;
+  --orb-blur: 1px;
+  --orb-opacity: 0.48;
+  --orb-duration: 14s;
+  --orb-delay: -7s;
+  top: 30%;
+  left: 18%;
+}
+
+.toolkit-orb-7 {
+  --orb-size: 178px;
+  --orb-blur: 7px;
+  --orb-opacity: 0.18;
+  --orb-duration: 24s;
+  --orb-delay: -18s;
+  top: -12%;
+  right: 34%;
+}
+
+@keyframes toolkit-orb-drift {
+  0% {
+    transform: translate3d(-34px, 20px, 0) scale(0.86);
+  }
+
+  35% {
+    transform: translate3d(22px, -28px, 0) scale(1.08);
+  }
+
+  68% {
+    transform: translate3d(58px, 18px, 0) scale(0.94);
+  }
+
+  100% {
+    transform: translate3d(-12px, -44px, 0) scale(1.16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toolkit-orb {
+    animation: none;
+  }
+}
+
 .toolkit-hero-inner {
   position: relative;
   z-index: 1;

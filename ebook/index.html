@@ -1536,7 +1536,9 @@
     /* 13th Item Featured Spotlight to Eliminate Empty Space */
     .spotlight-card-elite {
       grid-column: 1 / -1;
-      background: linear-gradient(135deg, #4259A9 0%, #2f407c 100%);
+      background:
+        radial-gradient(circle at 82% 22%, rgba(66, 89, 169, 0.34), transparent 26rem),
+        linear-gradient(135deg, #0c1d35 0%, #102d4d 55%, #162c68 100%);
       color: #ffffff;
       border: none;
       padding: 2rem 2.5rem;
@@ -1544,7 +1546,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 20px 40px rgba(66, 89, 169, 0.25);
+      box-shadow: 0 20px 40px rgba(16, 45, 77, 0.22);
       margin-top: 1rem;
     }
 
@@ -1570,7 +1572,37 @@
       gap: 1.5rem;
     }
 
+    /* Keep the audience cards as a deliberate, centered composition. */
+    #audience-actual .elite-grid {
+      width: 100%;
+      max-width: 760px;
+      margin-inline: auto;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    #audience-actual .elite-column {
+      min-width: 0;
+      gap: 1.5rem;
+    }
+
+    #audience-actual .icon-card-elite {
+      min-height: 230px;
+    }
+
+    @media (max-width: 1024px) {
+      #audience-actual .elite-grid {
+        max-width: 700px;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+    }
+
     @media (max-width: 768px) {
+      #audience-actual .elite-grid {
+        max-width: 360px;
+        grid-template-columns: 1fr !important;
+      }
+
       .spotlight-card-elite {
         flex-direction: column;
         text-align: center;
@@ -1693,6 +1725,16 @@
           </defs>
         </svg>
 
+        <div class="ebook-hero-orbs" aria-hidden="true">
+          <span class="ebook-orb ebook-orb-1"></span>
+          <span class="ebook-orb ebook-orb-2"></span>
+          <span class="ebook-orb ebook-orb-3"></span>
+          <span class="ebook-orb ebook-orb-4"></span>
+          <span class="ebook-orb ebook-orb-5"></span>
+          <span class="ebook-orb ebook-orb-6"></span>
+          <span class="ebook-orb ebook-orb-7"></span>
+        </div>
+
 
         <div class="shell hero-inner">
           <div class="hero-copy">
@@ -1711,7 +1753,7 @@
                   aria-hidden="true">↗</span></a>
               <!-- <a class="button button-gold" href="#priority-actual">Join the Priority List <span
                   aria-hidden="true">↗</span></a> -->
-              <a class="button button-outline-light" href="./training/training.html">Request DPIA Training <span
+              <a class="button button-outline-light" href="./training/training.html">Request a DPIA Training <span
                   aria-hidden="true">↗</span></a>
               <!-- <a class="button button-outline-light" href="#">Buy the DPIA Made Easy Professional Edition <span
                   aria-hidden="true">→</span></a> -->
@@ -2089,7 +2131,6 @@
 
       <section id="audio-actual" class="audio-teaser section-dark reveal-section reveal-from-left"
         style="display:none; opacity:0;" aria-labelledby="audio-title">
-        <div class="audio-glow" aria-hidden="true"></div>
         <div class="shell audio-grid">
           <div class="audio-copy">
             <p class="eyebrow eyebrow-gold"><span class="eyebrow-rule"></span>Now Playing · DPIA Made Easy in 60 Seconds
@@ -2104,6 +2145,7 @@
 
           <div class="audio-player" data-audio-player>
             <audio data-audio-element preload="metadata">
+              <!-- Replace this file with the final preview audio; no other page changes are needed. -->
               <source src="../audio/dpia-author-intro.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
             </audio>
@@ -2627,12 +2669,12 @@
                 DPIAs.</small>
             </p>
 
-            <div class="training-types"><span>Corporate in-house training</span><span>Professional practitioner
-                workshops</span><span>Executive briefings</span><span>Public training
-                programmes</span><span>Sector-specific DPIA workshops</span></div>
+            <div class="training-types"><span>Public webinars</span><span>Professional
+                workshops</span><span>Organisational training</span><span>In-house training</span><span>Practical DPIA
+                wrorkshops</span><span>Sector-specific training</span><span>Bespoke training programmes</span></div>
             <!-- <a class="button dpia-button" href="#">Get the Handbook <span aria-hidden="true">↗</span></a>
             <a class="button dpia-button" href="#">Get the Toolkit<span aria-hidden="true">↗</span></a> -->
-            <a class="button dpia-button" href="../ebook/training/training.html">Book Training <span
+            <a class="button dpia-button" href="../ebook/training/training.html">Request a DPIA Training <span
                 aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -2674,18 +2716,22 @@
         style="display: none; opacity: 0;" aria-labelledby="consultation-title">
         <div class="shell consultation-grid">
           <div>
-            <p class="eyebrow eyebrow-gold">ACE Data Protection Consulting</p>
+            <p class="eyebrow eyebrow-gold"> DPIA Consultations & Professional Services</p>
             <h2 id="consultation-title">Need Support With a DPIA?</h2>
-            <p>ACE Data Protection Consulting can support organisations with:</p>
+            <p>ACE Data Protection Consulting offeres Expert Practical Support for organisations that don't simply want
+              to learn about DPIAs but need help apply them.
+
+              Potential services include:
+            </p>
           </div>
           <div class="consultation-right">
-            <div class="consultation-list"><span>DPIA facilitation</span><span>High-risk processing
-                reviews</span><span>AI
-                and emerging technology assessments</span><span>DPIA programme development</span><span>Privacy
-                governance
-                frameworks</span><span>Independent DPIA review</span><span>Management and governance support</span>
+            <div class="consultation-list"><span>DPIA screening support</span><span>DPIA consultations</span><span>DPIA
+                review</span><span>DPIA Implementation support</span><span>Privacy
+                risk assessment</span><span>Data flow mapping support</span><span>Stakeholder consultation
+                support</span><span>DPIA workshops</span><span>DPIA programme development</span><span>Bespoke
+                organisational advice</span><span>Ongoing privacy/data protection support</span>
             </div>
-            <a class="button button-white" href="./consultation/consultation.html">Request Consultation <span
+            <a class="button button-white" href="./consultation/consultation.html">Request a DPIA Consultation <span
                 aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -2773,7 +2819,7 @@
             <article class="series-card">
               <div class="series-icon">04</div>
               <div>
-                <h3>ACE DPIA Advisory Services</h3>
+                <h3>ACE DPIA Consultations & Professional Services</h3>
                 <p>Implementation and expert support</p>
               </div>
             </article>
