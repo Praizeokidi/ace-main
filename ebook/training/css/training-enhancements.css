@@ -135,6 +135,16 @@
   text-underline-offset: 5px;
 }
 
+/* Use the shared ebook seven-orb treatment; suppress the older Training-only pseudo-orbs. */
+#training-hero.training-hero::before,
+#training-hero.training-hero::after,
+#training-hero .training-hero-inner::before {
+  content: none;
+  animation: none !important;
+  background: none;
+  box-shadow: none;
+}
+
 .training-page .learning-journey {
   position: relative;
   overflow: hidden;
